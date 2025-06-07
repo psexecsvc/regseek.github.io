@@ -1,0 +1,102 @@
+# RegSeek Artifact Template - Copy this file and fill in the details
+# File naming: use-lowercase-with-hyphens.yml
+
+title: "Artifact Display Name"
+category: "execution|network|usb|user-activity|persistence|system|security|cloud|browser|malware|mobile|virtualization|communication"
+
+description: "Brief description of what this artifact reveals (focus on forensic value)"
+
+paths:
+  - "HKLM\\Path\\To\\Key"
+  - "HKCU\\Alternate\\Path" # Optional additional paths
+
+details:
+  what: |
+    Detailed explanation of what Windows stores in this location.
+    Can be multiple lines. Explain the purpose and what data is saved.
+    Focus on the technical details that investigators need to understand.
+
+  forensic_value: |
+    Explain why investigators should care about this artifact.
+    What questions does it answer? What can it prove?
+    How does it fit into different investigation scenarios?
+
+  structure: |
+    Describe the format of the data (binary, DWORD, string, etc).
+    Include any encoding details or data structures.
+    Mention byte order, timestamp formats, etc.
+
+  examples:
+    - "Example registry value or data showing typical content"
+    - "Another example showing different scenario or edge case"
+    - "Format: Key\\Subkey = Value (Type) - explanation"
+
+  tools:
+    - name: "Tool Name"
+      url: "https://example.com" # Optional but recommended
+      description: "Brief description of what this tool does" # Optional
+    - name: "Another Tool"
+      description: "Alternative analysis method"
+
+metadata:
+  windows_versions:
+    - "Windows 10"
+    - "Windows 11"
+    - "Windows Server 2019"
+    - "Windows Server 2022"
+
+  # When this artifact was introduced (optional)
+  introduced: "Windows Vista"
+
+  # When this artifact was deprecated/removed (optional)
+  deprecated: "Windows 11 22H2"
+
+  criticality: "high|medium|low"
+
+  # Investigation types where this is particularly useful
+  investigation_types:
+    - "malware-analysis"
+    - "data-exfiltration"
+    - "insider-threat"
+    - "incident-response"
+    - "timeline-analysis"
+
+  tags:
+    - "specific-keyword"
+    - "another-tag"
+    - "forensic-category"
+
+  # References and sources (optional but recommended)
+  references:
+    - title: "Microsoft Documentation"
+      url: "https://docs.microsoft.com/..."
+      type: "official" # official, research, blog, tool
+    - title: "Research Paper or Blog Post"
+      url: "https://example.com/paper.pdf"
+      type: "research"
+
+  # Data retention information
+  retention:
+    default_location: "Registry hive file"
+    persistence: "Survives reboots and system cleaning"
+    volatility: "Persistent until explicitly deleted"
+
+  # Related artifacts that investigators should also check
+  related_artifacts:
+    - "artifact-id-1"
+    - "artifact-id-2"
+
+# Author attribution (recommended)
+author:
+  name: "Your Name"
+  github: "yourusername" # Optional
+  x: "yourhandle" # Optional X (formerly Twitter) handle
+  email: "your.email@example.com" # Optional
+  organization: "Your Organization" # Optional
+
+# Contribution information
+contribution:
+  date_added: "2025-01-15"
+  last_updated: "2025-01-15"
+  version: "1.0"
+  reviewed_by: "Reviewer Name" # Optional

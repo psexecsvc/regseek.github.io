@@ -1,0 +1,181 @@
+name: Build and Deploy RegSeek
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  validate-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        run: |
+          pip install -r scripts/requirements.txt
+
+      - name: Validate artifacts
+        run: |
+          echo "Validating all RegSeek artifacts..."
+          python scripts/validate.py
+
+      - name: Build site
+        run: |
+          echo "Building RegSeek..."
+          python scripts/build.py
+
+      - name: Test build output
+        run: |
+          echo "Testing build output..."
+          ls -la site/
+          ls -la site/build/
+          echo "Artifacts JSON size:"
+          wc -c site/build/artifacts.json
+          echo "Total artifacts:"
+          jq '.total' site/build/artifacts.json
+          echo "Categories:"
+          jq '.statistics.by_category | keys[]' site/build/artifacts.json
+          echo "High priority artifacts:"
+          jq '.statistics.by_criticality.high // 0' site/build/artifacts.json
+
+      - name: Setup Pages
+        if: github.ref == 'refs/heads/main'
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./site"
+
+      - name: Upload build artifacts (for PRs)
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: regseek-build-pr-${{ github.event.number }}
+          path: site/build/
+          retention-days: 7
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: validate-and-build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Deployment success
+        run: |
+          echo "RegSeek deployed successfully!"
+          echo "URL: ${{ steps.deployment.outputs.page_url }}"
+
+  stats:
+    if: github.ref == 'refs/heads/main'
+    needs: validate-and-build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        run: |
+          pip install -r scripts/requirements.txt
+
+      - name: Generate project statistics
+        run: |
+          echo "## RegSeek Build Stats" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          # Count artifacts by category
+          python3 << 'EOF'
+          import yaml
+          from pathlib import Path
+          from collections import defaultdict
+
+          artifacts_dir = Path("artifacts")
+          stats = defaultdict(int)
+          criticality_stats = defaultdict(int)
+          investigation_stats = defaultdict(int)
+          total = 0
+
+          for category_dir in artifacts_dir.iterdir():
+              if category_dir.is_dir() and not category_dir.name.startswith('_'):
+                  for artifact_file in category_dir.glob("*.yml"):
+                      if artifact_file.name.startswith('_'):
+                          continue
+                      
+                      try:
+                          with open(artifact_file, 'r', encoding='utf-8') as f:
+                              artifact = yaml.safe_load(f)
+                              if artifact:
+                                  category = artifact.get('category', category_dir.name)
+                                  stats[category] += 1
+                                  total += 1
+                                  
+                                  # Criticality stats
+                                  metadata = artifact.get('metadata', {})
+                                  criticality = metadata.get('criticality', 'unspecified')
+                                  criticality_stats[criticality] += 1
+                                  
+                                  # Investigation types
+                                  inv_types = metadata.get('investigation_types', [])
+                                  for inv_type in inv_types:
+                                      investigation_stats[inv_type] += 1
+                                      
+                      except Exception as e:
+                          print(f"Error processing {artifact_file}: {e}")
+
+          print(f"**Total Artifacts:** {total}")
+          print("")
+          print("### By Category")
+          print("| Category | Count |")
+          print("|----------|-------|")
+          for category, count in sorted(stats.items()):
+              category_display = category.replace('-', ' ').title()
+              print(f"| {category_display} | {count} |")
+
+          print("")
+          print("### By Criticality")
+          print("| Level | Count |")
+          print("|-------|-------|")
+          for level in ['high', 'medium', 'low', 'unspecified']:
+              count = criticality_stats[level]
+              if count > 0:
+                  emoji = {'high': '🔴', 'medium': '🟡', 'low': '🟢', 'unspecified': '⚪'}[level]
+                  print(f"| {emoji} {level.title()} | {count} |")
+
+          print("")
+          print("### Top Investigation Types")
+          print("| Type | Count |")
+          print("|------|-------|")
+          sorted_inv = sorted(investigation_stats.items(), key=lambda x: x[1], reverse=True)
+          for inv_type, count in sorted_inv[:10]:
+              inv_display = inv_type.replace('-', ' ').title()
+              print(f"| {inv_display} | {count} |")
+
+          EOF

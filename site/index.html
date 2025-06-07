@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegSeek - Windows Registry Forensics Reference</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">RegSeek</h1>
+                <p class="tagline">Advanced Windows Registry forensics reference and search engine</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="search-container">
+            <div class="search-wrapper">
+                <input 
+                    type="text" 
+                    id="search" 
+                    placeholder="Search artifacts by name, path, description, or keywords..."
+                    autocomplete="off"
+                >
+                <button class="advanced-search-btn" id="advanced-search-btn">Advanced Search</button>
+            </div>
+        </div>
+
+        <!-- Advanced Search Panel -->
+        <div class="advanced-search-panel" id="advanced-search-panel">
+            <div class="advanced-search-content">
+                <h3>Advanced Search Filters</h3>
+                
+                <div class="filter-grid">
+                    <div class="filter-group">
+                        <label>Category</label>
+                        <select id="filter-category">
+                            <option value="">All Categories</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Criticality</label>
+                        <select id="filter-criticality">
+                            <option value="">All Levels</option>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Investigation Type</label>
+                        <select id="filter-investigation">
+                            <option value="">All Types</option>
+                            <option value="malware-analysis">Malware Analysis</option>
+                            <option value="data-exfiltration">Data Exfiltration</option>
+                            <option value="insider-threat">Insider Threat</option>
+                            <option value="incident-response">Incident Response</option>
+                            <option value="timeline-analysis">Timeline Analysis</option>
+                            <option value="privilege-escalation">Privilege Escalation</option>
+                            <option value="lateral-movement">Lateral Movement</option>
+                            <option value="persistence-analysis">Persistence Analysis</option>
+                            <option value="behavioral-analysis">Behavioral Analysis</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Windows Version</label>
+                        <select id="filter-windows-version">
+                            <option value="">All Versions</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Registry Hive</label>
+                        <select id="filter-hive">
+                            <option value="">All Hives</option>
+                            <option value="HKLM">HKLM (Local Machine)</option>
+                            <option value="HKCU">HKCU (Current User)</option>
+                            <option value="HKCR">HKCR (Classes Root)</option>
+                            <option value="HKU">HKU (Users)</option>
+                            <option value="HKCC">HKCC (Current Config)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Has Tools</label>
+                        <select id="filter-has-tools">
+                            <option value="">Any</option>
+                            <option value="yes">Has Analysis Tools</option>
+                            <option value="no">No Tools Listed</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="advanced-search-actions">
+                    <button class="btn-secondary" id="clear-filters">Clear All Filters</button>
+                    <button class="btn-primary" id="apply-filters">Apply Filters</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Filters -->
+        <div class="quick-filters">
+            <div class="filter-section">
+                <label>Quick Category Filter:</label>
+                <div class="quick-filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="execution">Execution</button>
+                    <button class="filter-btn" data-filter="network">Network</button>
+                    <button class="filter-btn" data-filter="persistence">Persistence</button>
+                    <button class="filter-btn" data-filter="user-activity">User Activity</button>
+                    <button class="filter-btn" data-filter="system">System</button>
+                    <button class="filter-btn" data-filter="usb">USB/Storage</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-value" id="total-artifacts">0</div>
+                <div class="stat-label">Total Artifacts</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="total-categories">0</div>
+                <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="visible-artifacts">0</div>
+                <div class="stat-label">Showing</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="high-criticality">0</div>
+                <div class="stat-label">High Priority</div>
+            </div>
+        </div>
+
+        <!-- Sort Options -->
+        <div class="sort-options">
+            <label for="sort-select">Sort by:</label>
+            <select id="sort-select">
+                <option value="title">Title (A-Z)</option>
+                <option value="title-desc">Title (Z-A)</option>
+                <option value="category">Category</option>
+                <option value="criticality">Criticality</option>
+                <option value="recent">Recently Added</option>
+            </select>
+        </div>
+
+        <!-- Registry Grid -->
+        <div class="registry-grid" id="registry-grid">
+            <div class="loading">Loading artifacts...</div>
+        </div>
+    </main>
+
+    <!-- Artifact Detail Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
