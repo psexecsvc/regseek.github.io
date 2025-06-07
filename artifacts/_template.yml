@@ -1,5 +1,5 @@
 # RegSeek Artifact Template - Copy this file and fill in the details
-# File naming: use-lowercase-with-hyphens.yml
+# File naming: use_lowercase_with_underscore.yml
 
 title: "Artifact Display Name"
 category: "execution|network|usb|user-activity|persistence|system|security|cloud|browser|malware|mobile|virtualization|communication"

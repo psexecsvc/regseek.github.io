@@ -76,7 +76,7 @@ Visit the deployed site: [https://regseek.github.io/](https://regseek.github.io/
 
 # Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTE.md) for details.
 
 # License
 

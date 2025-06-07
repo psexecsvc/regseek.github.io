@@ -1,6 +1,6 @@
 # Contributing
 
-### Ways to Contribute$
+### Ways to Contribute
 
 1. **Add new artifacts** using the template
 2. **Improve existing artifacts** with better descriptions or tools
