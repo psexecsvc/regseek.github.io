@@ -3,6 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4HYJ4F0Y01"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4HYJ4F0Y01');
+        
+        // Enhanced tracking functions for RegSeek
+        function trackArtifactView(artifactTitle, category, criticality) {
+            gtag('event', 'artifact_view', {
+                'artifact_title': artifactTitle,
+                'artifact_category': category,
+                'artifact_criticality': criticality || 'unspecified'
+            });
+        }
+        
+        function trackSearch(searchTerm) {
+            if (searchTerm && searchTerm.length > 2) {
+                gtag('event', 'search', {
+                    'search_term': searchTerm
+                });
+            }
+        }
+        
+        function trackFilterUsage(filterType, filterValue) {
+            gtag('event', 'filter_applied', {
+                'filter_type': filterType,
+                'filter_value': filterValue
+            });
+        }
+        
+        function trackToolClick(toolName, toolUrl) {
+            gtag('event', 'tool_click', {
+                'tool_name': toolName,
+                'tool_url': toolUrl
+            });
+        }
+        
+        function trackSort(sortType) {
+            gtag('event', 'sort_applied', {
+                'sort_type': sortType
+            });
+        }
+    </script>
+    
     <title>RegSeek - Windows Registry Forensics Reference</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>

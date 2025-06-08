@@ -144,6 +144,15 @@ function showModal(artifact) {
     const modal = document.getElementById('modal');
     const modalBody = document.getElementById('modal-body');
     
+    // Track artifact view
+    if (typeof trackArtifactView === 'function') {
+        trackArtifactView(
+            artifact.title, 
+            artifact.category, 
+            artifact.metadata?.criticality
+        );
+    }
+    
     const metadata = artifact.metadata || {};
     const details = artifact.details || {};
     const author = artifact.author || {};
@@ -154,14 +163,15 @@ function showModal(artifact) {
         <span class="modal-criticality ${criticality}">${criticality} Priority</span>
     ` : '';
     
-    // Format tools
+    // Format tools with tracking
     const tools = details.tools || [];
     const toolsHtml = tools.map(tool => {
         if (typeof tool === 'string') {
             return `<span class="tool-link">${tool}</span>`;
         }
         if (tool.url) {
-            return `<a href="${tool.url}" class="tool-link" target="_blank" rel="noopener">${tool.name}</a>`;
+            const safeName = tool.name.replace(/'/g, '\\\'');
+            return `<a href="${tool.url}" class="tool-link" target="_blank" rel="noopener" onclick="trackToolClick('${safeName}', '${tool.url}')">${tool.name}</a>`;
         }
         return `<span class="tool-link">${tool.name}</span>`;
     }).join('');
@@ -276,12 +286,20 @@ function setupEventListeners() {
         searchInput.addEventListener('input', debounce(performSearch, 300));
     }
     
-    // Quick filter buttons
+    // Quick filter buttons with tracking
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             e.target.classList.add('active');
-            currentFilters.category = e.target.dataset.filter === 'all' ? '' : e.target.dataset.filter;
+            
+            const filterValue = e.target.dataset.filter;
+            currentFilters.category = filterValue === 'all' ? '' : filterValue;
+            
+            // Track quick filter usage
+            if (typeof trackFilterUsage === 'function' && filterValue !== 'all') {
+                trackFilterUsage('quick_category', filterValue);
+            }
+            
             performSearch();
         });
     });
@@ -355,12 +373,23 @@ function setupEventListeners() {
 
 // Update advanced filters
 function updateAdvancedFilters() {
+    const oldFilters = {...currentFilters};
+    
     currentFilters.category = document.getElementById('filter-category')?.value || '';
     currentFilters.criticality = document.getElementById('filter-criticality')?.value || '';
     currentFilters.investigation = document.getElementById('filter-investigation')?.value || '';
     currentFilters.windowsVersion = document.getElementById('filter-windows-version')?.value || '';
     currentFilters.hive = document.getElementById('filter-hive')?.value || '';
     currentFilters.hasTools = document.getElementById('filter-has-tools')?.value || '';
+    
+    // Track filter changes
+    if (typeof trackFilterUsage === 'function') {
+        Object.keys(currentFilters).forEach(filterType => {
+            if (currentFilters[filterType] && currentFilters[filterType] !== oldFilters[filterType]) {
+                trackFilterUsage(filterType, currentFilters[filterType]);
+            }
+        });
+    }
     
     performSearch();
 }
@@ -378,7 +407,7 @@ function clearAllFilters() {
     
     // Reset quick filters
     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-    document.querySelector('.filter-btn[data-filter=\"all\"]').classList.add('active');
+    document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
     
     // Reset filters object
     currentFilters = {
@@ -398,6 +427,11 @@ function clearAllFilters() {
 function performSearch() {
     const searchInput = document.getElementById('search');
     currentFilters.search = searchInput ? searchInput.value.toLowerCase() : '';
+    
+    // Track search queries
+    if (currentFilters.search && typeof trackSearch === 'function') {
+        trackSearch(currentFilters.search);
+    }
     
     filteredArtifacts = allArtifacts.filter(artifact => {
         // Text search
@@ -448,7 +482,7 @@ function performSearch() {
         // Registry hive filter
         if (currentFilters.hive) {
             const paths = artifact.paths || [];
-            const hasHive = paths.some(path => path.startsWith(currentFilters.hive + '\\\\'));
+            const hasHive = paths.some(path => path.startsWith(currentFilters.hive + '\\'));
             if (!hasHive) {
                 return false;
             }
@@ -476,6 +510,11 @@ function performSearch() {
 function handleSort() {
     const sortSelect = document.getElementById('sort-select');
     const sortBy = sortSelect.value;
+    
+    // Track sort usage
+    if (typeof trackSort === 'function') {
+        trackSort(sortBy);
+    }
     
     const sorted = [...filteredArtifacts].sort((a, b) => {
         switch (sortBy) {
