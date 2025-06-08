@@ -4,9 +4,14 @@ description: "Windows Hello configuration, biometric enrollment, PIN settings, a
 
 paths:
   - "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\WinBio"
+  - "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\WinBio\\Credentials"
   - "HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\WinBio"
+  - "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\WinBio\\Settings"
   - "HKLM\\SOFTWARE\\Policies\\Microsoft\\PassportForWork"
   - "HKLM\\SOFTWARE\\Microsoft\\PolicyManager\\current\\device\\DeviceLock"
+  - "HKLM\\SOFTWARE\\Policies\\Microsoft\\PassportForWork"
+  - "HKLM\\SYSTEM\\CurrentControlSet\\Services\\WbioSrvc"
+
 
 details:
   what: |

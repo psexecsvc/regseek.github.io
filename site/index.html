@@ -4,25 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4HYJ4F0Y01"></script>
+    <!-- Conditional Google Analytics - Only loads if user consents -->
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-4HYJ4F0Y01');
+        // Check for existing consent
+        const hasConsent = localStorage.getItem('analytics-consent') === 'true';
         
-        // Enhanced tracking functions for RegSeek
+        // Initialize Google Analytics only if consent is given
+        function initializeAnalytics() {
+            // Load Google Analytics
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-4HYJ4F0Y01';
+            document.head.appendChild(script);
+            
+            script.onload = function() {
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-4HYJ4F0Y01', {
+                    anonymize_ip: true,
+                    cookie_flags: 'SameSite=None;Secure'
+                });
+                
+                // Set global flag that analytics is loaded
+                window.analyticsLoaded = true;
+            };
+        }
+        
+        // Load analytics immediately if consent already given
+        if (hasConsent) {
+            initializeAnalytics();
+        }
+        
+        // Enhanced tracking functions with consent check
         function trackArtifactView(artifactTitle, category, criticality) {
-            gtag('event', 'artifact_view', {
-                'artifact_title': artifactTitle,
-                'artifact_category': category,
-                'artifact_criticality': criticality || 'unspecified'
-            });
+            if (window.analyticsLoaded && typeof gtag !== 'undefined') {
+                gtag('event', 'artifact_view', {
+                    'artifact_title': artifactTitle,
+                    'artifact_category': category,
+                    'artifact_criticality': criticality || 'unspecified'
+                });
+            }
         }
         
         function trackSearch(searchTerm) {
-            if (searchTerm && searchTerm.length > 2) {
+            if (window.analyticsLoaded && typeof gtag !== 'undefined' && searchTerm && searchTerm.length > 2) {
                 gtag('event', 'search', {
                     'search_term': searchTerm
                 });
@@ -30,30 +56,151 @@
         }
         
         function trackFilterUsage(filterType, filterValue) {
-            gtag('event', 'filter_applied', {
-                'filter_type': filterType,
-                'filter_value': filterValue
-            });
+            if (window.analyticsLoaded && typeof gtag !== 'undefined') {
+                gtag('event', 'filter_applied', {
+                    'filter_type': filterType,
+                    'filter_value': filterValue
+                });
+            }
         }
         
         function trackToolClick(toolName, toolUrl) {
-            gtag('event', 'tool_click', {
-                'tool_name': toolName,
-                'tool_url': toolUrl
-            });
+            if (window.analyticsLoaded && typeof gtag !== 'undefined') {
+                gtag('event', 'tool_click', {
+                    'tool_name': toolName,
+                    'tool_url': toolUrl
+                });
+            }
         }
         
         function trackSort(sortType) {
-            gtag('event', 'sort_applied', {
-                'sort_type': sortType
-            });
+            if (window.analyticsLoaded && typeof gtag !== 'undefined') {
+                gtag('event', 'sort_applied', {
+                    'sort_type': sortType
+                });
+            }
         }
     </script>
     
     <title>RegSeek - Windows Registry Forensics Reference</title>
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Cookie Banner Styles -->
+    <style>
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #1a1a1a;
+            border-top: 1px solid #333;
+            padding: 16px 24px;
+            z-index: 10000;
+            display: none;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .cookie-banner.show {
+            display: block;
+        }
+        
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-text {
+            color: #e5e5e5;
+            font-size: 14px;
+            line-height: 1.5;
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .cookie-text a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        .cookie-text a:hover {
+            text-decoration: underline;
+        }
+        
+        .cookie-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        
+        .cookie-btn.accept {
+            background: #3b82f6;
+            color: white;
+        }
+        
+        .cookie-btn.accept:hover {
+            background: #2563eb;
+        }
+        
+        .cookie-btn.decline {
+            background: transparent;
+            color: #a0a0a0;
+            border: 1px solid #404040;
+        }
+        
+        .cookie-btn.decline:hover {
+            background: #2a2a2a;
+            color: #e5e5e5;
+        }
+        
+        @media (max-width: 768px) {
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-text {
+                min-width: auto;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                We use Google Analytics to understand how visitors use our forensics reference tool.
+                This helps us improve RegSeek for the digital forensics community.
+                <a href="#" onclick="showPrivacyDetails()">Learn more about our data practices</a>.
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn decline" onclick="declineAnalytics()">
+                    Decline
+                </button>
+                <button class="cookie-btn accept" onclick="acceptAnalytics()">
+                    Accept Analytics
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rest of your existing HTML content -->
     <header>
         <div class="container">
             <div class="header-content">
@@ -64,11 +211,12 @@
     </header>
 
     <main class="container">
+        <!-- Your existing content continues here... -->
         <div class="search-container">
             <div class="search-wrapper">
-                <input 
-                    type="text" 
-                    id="search" 
+                <input
+                    type="text"
+                    id="search"
                     placeholder="Search artifacts by name, path, description, or keywords..."
                     autocomplete="off"
                 >
@@ -212,6 +360,53 @@
             <div id="modal-body"></div>
         </div>
     </div>
+
+    <!-- Cookie Banner JavaScript -->
+    <script>
+        // Cookie consent management
+        function showCookieBanner() {
+            const banner = document.getElementById('cookie-banner');
+            const hasConsent = localStorage.getItem('analytics-consent');
+            
+            // Show banner if no consent decision has been made
+            if (hasConsent === null) {
+                banner.classList.add('show');
+            }
+        }
+        
+        function acceptAnalytics() {
+            localStorage.setItem('analytics-consent', 'true');
+            document.getElementById('cookie-banner').classList.remove('show');
+            
+            // Initialize analytics now
+            if (typeof initializeAnalytics === 'function') {
+                initializeAnalytics();
+            }
+        }
+        
+        function declineAnalytics() {
+            localStorage.setItem('analytics-consent', 'false');
+            document.getElementById('cookie-banner').classList.remove('show');
+        }
+        
+        function showPrivacyDetails() {
+            alert(`Privacy Information:
+            
+• We use Google Analytics to understand how visitors use RegSeek
+• This includes page views, search queries, and feature usage
+• We anonymize IP addresses and use privacy-friendly settings
+• No personal information is collected or stored
+• You can withdraw consent at any time by clearing your browser data
+• Data helps us improve RegSeek for the digital forensics community
+
+This tool is provided free for educational and professional use.`);
+        }
+        
+        // Show banner when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            showCookieBanner();
+        });
+    </script>
 
     <script src="js/app.js"></script>
 </body>
