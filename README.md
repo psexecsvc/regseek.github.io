@@ -25,7 +25,7 @@ RegSeek is a comprehensive reference tool for Windows Registry forensics artifac
 - **Malware**: Malware-specific registry artifacts
 - **Communication**: Messaging and communication applications
 
-## Advanced Search
+# Advanced Search
 
 - **Category**: Filter by artifact category
 - **Criticality**: High/Medium/Low priority filtering
@@ -76,7 +76,7 @@ Visit the deployed site: [https://regseek.github.io/](https://regseek.github.io/
 
 # Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTE.md) for details.
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
 # License
 
