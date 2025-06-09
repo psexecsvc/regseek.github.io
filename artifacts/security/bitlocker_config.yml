@@ -54,16 +54,12 @@ details:
 
 metadata:
   windows_versions:
-    - "Windows Vista Enterprise"
-    - "Windows Vista Ultimate"
-    - "Windows 7 Enterprise"
-    - "Windows 7 Ultimate"
-    - "Windows 8 Pro"
-    - "Windows 8.1 Pro"
-    - "Windows 10 Pro"
-    - "Windows 10 Enterprise"
-    - "Windows 11 Pro"
-    - "Windows 11 Enterprise"
+    - "Windows Vista"
+    - "Windows 7"
+    - "Windows 8"
+    - "Windows 8.1"
+    - "Windows 10"
+    - "Windows 11"
     - "Windows Server 2008"
     - "Windows Server 2012"
     - "Windows Server 2016"

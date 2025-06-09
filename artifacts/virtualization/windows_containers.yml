@@ -55,10 +55,8 @@ details:
 
 metadata:
   windows_versions:
-    - "Windows 10 Enterprise"
-    - "Windows 10 Professional"
-    - "Windows 11 Enterprise"
-    - "Windows 11 Professional"
+    - "Windows 10"
+    - "Windows 11"
     - "Windows Server 2016"
     - "Windows Server 2019"
     - "Windows Server 2022"

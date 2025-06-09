@@ -55,14 +55,14 @@ details:
 
 metadata:
   windows_versions:
-    - "Windows XP SP2"
+    - "Windows XP"
     - "Windows Vista"
     - "Windows 7"
     - "Windows 8"
     - "Windows 8.1"
     - "Windows 10"
     - "Windows 11"
-    - "Windows Server 2003 SP1"
+    - "Windows Server 2003"
     - "Windows Server 2008"
     - "Windows Server 2012"
     - "Windows Server 2016"

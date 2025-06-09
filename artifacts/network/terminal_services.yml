@@ -58,7 +58,6 @@ details:
 metadata:
   windows_versions:
     - "Windows NT 4.0 Terminal Server Edition"
-    - "Windows 2000 Server"
     - "Windows XP"
     - "Windows Vista"
     - "Windows 7"
