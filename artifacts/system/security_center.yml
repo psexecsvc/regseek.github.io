@@ -69,7 +69,7 @@ metadata:
     - "Windows Server 2019"
     - "Windows Server 2022"
 
-  introduced: "Windows XP SP2"
+  introduced: "Windows XP"
 
   criticality: "medium"
 
