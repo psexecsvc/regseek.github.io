@@ -268,7 +268,7 @@
             </div>
         </div>
 
-        <!-- Advanced Search Panel - Clean Split Version -->
+        <!-- Advanced Search Panel - FIXED: No hardcoded categories -->
         <div class="advanced-search-panel" id="advanced-search-panel">
             <div class="advanced-search-content">
                 <h3>Advanced Search Filters</h3>
@@ -278,19 +278,7 @@
                         <label>Category</label>
                         <select id="filter-category">
                             <option value="">All Categories</option>
-                            <option value="program-execution">Program Execution</option>
-                            <option value="browser-activity">Browser Activity</option>
-                            <option value="file-operations">File Operations</option>
-                            <option value="user-behavior">User Behavior</option>
-                            <option value="external-storage">External Storage</option>
-                            <option value="persistence-methods">Persistence Methods</option>
-                            <option value="system-modifications">System Modifications</option>
-                            <option value="network-infrastructure">Network Infrastructure</option>
-                            <option value="remote-access">Remote Access</option>
-                            <option value="security-monitoring">Security Monitoring</option>
-                            <option value="communication-apps">Communication Apps</option>
-                            <option value="virtualization">Virtualization</option>
-                            <option value="authentication">Authentication</option>
+                            <!-- Options populated dynamically by JavaScript -->
                         </select>
                     </div>
                     
@@ -378,7 +366,7 @@
                     <button class="filter-btn" data-filter="program-execution">Program Execution</button>
                     <button class="filter-btn" data-filter="browser-activity">Browser Activity</button>
                     <button class="filter-btn" data-filter="file-operations">File Operations</button>
-                    <button class="filter-btn" data-filter="user-behavior">User Behavior</button>
+                    <button class="filter-btn" data-filter="user-behaviour">User Behavior</button>
                     <button class="filter-btn" data-filter="persistence-methods">Persistence</button>
                     <button class="filter-btn" data-filter="system-modifications">System</button>
                     <button class="filter-btn" data-filter="network-infrastructure">Network</button>

@@ -156,9 +156,27 @@ def build_site():
     # Generate statistics
     stats = generate_statistics(valid_artifacts)
     
-    # Create site data
-    categories = sorted(list(set(a['category'] for a in valid_artifacts)))
+    # Create site data - ensure categories match canonical list
+    all_found_categories = sorted(list(set(a['category'] for a in valid_artifacts)))
     
+    # Canonical categories from validation script
+    canonical_categories = [
+        "program-execution", "browser-activity", "file-operations", "user-behaviour",
+        "external-storage", "persistence-methods", "system-modifications", "network-infrastructure",
+        "remote-access", "security-monitoring", "communication-apps", "virtualization", "authentication"
+    ]
+    
+    # Filter to only include canonical categories and log any non-standard ones
+    categories = []
+    for category in all_found_categories:
+        if category in canonical_categories:
+            categories.append(category)
+        else:
+            print(f"   Warning: Non-standard category found: '{category}' - not included in category list")
+    
+    print(f" Using {len(categories)} canonical categories: {', '.join(categories)}")
+    
+    # Create site data structure
     site_data = {
         "artifacts": valid_artifacts,
         "categories": categories,

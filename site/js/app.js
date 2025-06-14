@@ -49,7 +49,7 @@ function populateFilterOptions(data) {
         data.categories.forEach(category => {
             const option = document.createElement('option');
             option.value = category;
-            option.textContent = category.charAt(0).toUpperCase() + category.slice(1).replace('-', ' ');
+            option.textContent = category.charAt(0).toUpperCase() + category.slice(1).replace(/-/g, ' ');
             categorySelect.appendChild(option);
         });
     }
