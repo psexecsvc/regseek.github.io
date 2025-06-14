@@ -12,22 +12,19 @@ details:
   what: |
     VMware Workstation and Player manage desktop virtualization including virtual
     machine creation, hardware configuration, network settings, and hypervisor
-    management. Registry stores VM configurations, licensing information, performance
-    settings, and virtual hardware preferences for comprehensive virtualization
-    platform analysis and virtual environment management tracking.
+    management. Registry stores VM configurations, licensing information,
+    performance settings, and virtual hardware preferences.
 
   forensic_value: |
     Critical for investigating virtual machine usage, potential evidence isolation,
     malware analysis environments, and sophisticated attack techniques using
-    virtualization. Shows evidence of VM creation, configuration changes, virtual
-    network setups, and can indicate attempts to hide activities through virtualization
-    or use of isolated environments for malicious purposes.
+    virtualization. Shows evidence of VM creation, configuration changes,
+    and virtual network setups that could hide activities.
 
   structure: |
     VMware configuration includes virtual machine paths, hardware settings, network
     configurations, licensing data, and performance preferences. VM registry entries
-    track virtual hardware assignments, snapshot locations, and isolation settings
-    for comprehensive virtualization behavior analysis and security assessment.
+    track virtual hardware assignments, snapshot locations, and isolation settings.
 
   examples:
     - "InstallPath: C:\\Program Files (x86)\\VMware\\VMware Workstation"
@@ -43,9 +40,29 @@ details:
       description: "VMware virtualization management interface"
     - name: "Registry Explorer"
       url: "https://ericzimmerman.github.io/#!index.md"
-      description: "Advanced registry analysis and browsing tool"
+      description: "Advanced registry analysis tool"
     - name: "VMware Tools"
-      description: "VMware virtual machine management and analysis utilities"
+      description: "VMware virtual machine management utilities"
+
+limitations:
+  - "Registry shows configuration only, not actual VM usage or guest OS activity"
+  - "Recent VM list doesn't prove virtual machines were actively used"
+  - "Shared folder settings don't indicate actual file sharing occurred"
+  - "VM inventory paths don't prove VMs were executed or contained malware"
+  - "Malware sandbox VMs suggest analysis but don't prove malicious activity"
+
+correlation:
+  required_for_definitive_conclusions:
+    - "VMware log files showing actual VM operations"
+    - "Virtual machine disk files (.vmdk, .vmx, .nvram)"
+    - "Process execution logs showing vmware.exe activity"
+    - "File system artifacts in VM storage directories"
+    - "Network traffic logs showing VM communications"
+  
+  strengthens_evidence:
+    - "Timeline analysis of VM creation and configuration changes"
+    - "User activity showing VMware application usage"
+    - "File operations in VM inventory directories"
 
 metadata:
   windows_versions:
@@ -58,17 +75,16 @@ metadata:
     - "Windows 11"
 
   introduced: "VMware Workstation"
-  
   criticality: "medium"
 
   investigation_types:
     - "malware-analysis"
     - "incident-response"
     - "behavioral-analysis"
+    - "anti-forensics"
 
   tags:
     - "vmware"
-    - "virtualization"
     - "virtual-machines"
     - "hypervisor"
     - "isolation"
@@ -85,9 +101,8 @@ metadata:
     volatility: "VM configuration changes provide evidence of virtualization usage patterns"
 
   related_artifacts:
-    - "virtualization_settings"
-    - "isolation_environments"
-    - "malware_analysis_tools"
+    - "oracle_virtual_box"
+    - "hyperv"
 
 author:
   name: "Tonmoy Jitu"

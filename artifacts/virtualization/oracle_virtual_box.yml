@@ -13,21 +13,19 @@ details:
     Oracle VirtualBox manages free desktop virtualization including virtual machine
     creation, hardware emulation, network configuration, and hypervisor management.
     Registry stores VM definitions, guest operating system configurations, shared
-    folder settings, snapshot management, and virtualization preferences for
-    comprehensive open-source virtualization platform analysis and virtual environment tracking.
+    folder settings, and snapshot management.
 
   forensic_value: |
     Critical for investigating virtual machine usage in security research, malware
     analysis, evidence isolation, and potential evasion techniques using free
     virtualization software. Shows evidence of VM creation, guest OS installations,
-    network isolation setups, and can indicate attempts to conceal activities
-    through virtualized environments or use VMs for malicious testing and analysis.
+    and network isolation setups that could conceal activities.
 
   structure: |
     VirtualBox configuration includes virtual machine registry data, guest additions
     status, network adapter settings, shared folder configurations, and snapshot
-    information. VM entries track hardware allocations, ISO mounting history, and
-    virtual device assignments for comprehensive VirtualBox usage analysis and security assessment.
+    information. VM entries track hardware allocations, ISO mounting history,
+    and virtual device assignments.
 
   examples:
     - "InstallDir: C:\\Program Files\\Oracle\\VirtualBox"
@@ -46,9 +44,27 @@ details:
       description: "VirtualBox command-line management utility"
     - name: "Registry Explorer"
       url: "https://ericzimmerman.github.io/#!index.md"
-      description: "Advanced registry analysis and browsing tool"
-    - name: "VirtualBox Guest Additions"
-      description: "Enhanced VM integration and shared folder management"
+      description: "Advanced registry analysis tool"
+
+limitations:
+  - "Registry shows configuration only, not actual VM usage or guest OS activity"
+  - "Recent VM list doesn't prove virtual machines were actively used"
+  - "Shared folder mappings don't indicate actual file transfers occurred"
+  - "Guest additions presence doesn't prove VM integration was used"
+  - "Kali Linux VMs suggest penetration testing but don't prove malicious activity"
+
+correlation:
+  required_for_definitive_conclusions:
+    - "VirtualBox log files showing actual VM operations"
+    - "Virtual machine disk files (.vdi, .vmdk, .vhd)"
+    - "Process execution logs showing VirtualBox.exe activity"
+    - "File system artifacts in shared folder locations"
+    - "Network traffic logs showing VM communications"
+  
+  strengthens_evidence:
+    - "Timeline analysis of VM creation and configuration changes"
+    - "User activity showing VirtualBox Manager usage"
+    - "File operations in VM storage directories"
 
 metadata:
   windows_versions:
@@ -61,18 +77,17 @@ metadata:
     - "Windows 11"
 
   introduced: "Oracle VirtualBox"
-  
   criticality: "medium"
 
   investigation_types:
     - "malware-analysis"
     - "incident-response"
     - "behavioral-analysis"
+    - "anti-forensics"
 
   tags:
     - "virtualbox"
     - "oracle"
-    - "virtualization"
     - "virtual-machines"
     - "free-hypervisor"
     - "isolation"
@@ -89,13 +104,11 @@ metadata:
   retention:
     default_location: "Registry hive files (SOFTWARE, NTUSER.DAT)"
     persistence: "VM configurations and settings persist until manual deletion or software removal"
-    volatility: "Virtual machine usage patterns provide evidence of virtualization activities and security research"
+    volatility: "Virtual machine usage patterns provide evidence of virtualization activities"
 
   related_artifacts:
-    - "virtualization_settings"
-    - "vmware_workstation"
-    - "isolation_environments"
-    - "malware_analysis_tools"
+    - "vmware"
+    - "hyperv"
 
 author:
   name: "Tonmoy Jitu"
@@ -105,4 +118,4 @@ author:
 contribution:
   date_added: "2025-06-08"
   last_updated: "2025-06-08"
-  version: "1.0"
+  version: "3.0"
