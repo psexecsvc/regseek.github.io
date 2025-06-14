@@ -10,23 +10,22 @@ paths:
 
 details:
   what: |
-    Windows Subsystem for Linux enables running Linux distributions natively on Windows through
-    compatibility layer technology. Registry configuration includes installed distributions,
-    default distribution settings, user mappings, file system interoperability, network
-    configuration, and development environment preferences for Linux development on Windows.
+    Windows Subsystem for Linux enables running Linux distributions natively on Windows
+    through compatibility layer technology. Registry configuration includes installed
+    distributions, default distribution settings, user mappings, file system
+    interoperability, and network configuration.
 
   forensic_value: |
-    Critical for investigating Linux-based attack tools, cross-platform malware, development
-    environment abuse, and sophisticated attacks that leverage Linux capabilities within Windows.
-    Shows evidence of Linux tool usage, script execution, container operations, and potential
-    security bypasses through Linux environment. Essential for advanced persistent threat
-    investigations involving cross-platform attack techniques.
+    Critical for investigating Linux-based attack tools, cross-platform malware,
+    development environment abuse, and sophisticated attacks that leverage Linux
+    capabilities within Windows. Shows evidence of Linux tool usage and potential
+    security bypasses through Linux environment.
 
   structure: |
-    WSL configuration includes DefaultDistribution (default Linux distro), installed distribution
-    metadata, user ID mappings, interoperability settings, and file system mount configurations.
-    Distribution entries contain installation paths, kernel versions, default user settings,
-    and distribution-specific configuration for comprehensive Linux environment management.
+    WSL configuration includes DefaultDistribution (default Linux distro), installed
+    distribution metadata, user ID mappings, interoperability settings, and file
+    system mount configurations. Distribution entries contain installation paths,
+    kernel versions, and default user settings.
 
   examples:
     - "DefaultDistribution: Ubuntu-20.04 (Default Linux distribution)"
@@ -45,11 +44,27 @@ details:
       description: "Windows feature management including WSL enablement"
     - name: "Registry Explorer"
       url: "https://ericzimmerman.github.io/#!index.md"
-      description: "Advanced registry analysis and browsing tool"
-    - name: "WSL Configuration Manager"
-      description: "Third-party tools for WSL configuration analysis"
-    - name: "Linux Distribution Analyzer"
-      description: "Tools for analyzing installed Linux distributions and usage"
+      description: "Advanced registry analysis tool"
+
+limitations:
+  - "Registry shows installed distributions only, not actual Linux command execution"
+  - "Distribution presence doesn't prove Linux tools were actively used"
+  - "WSL configuration doesn't indicate specific commands or scripts run"
+  - "State values show installation status, not usage patterns or frequency"
+  - "Kali Linux installation suggests penetration testing but doesn't prove malicious activity"
+
+correlation:
+  required_for_definitive_conclusions:
+    - "WSL process execution logs showing actual Linux command activity"
+    - "Linux command history files within WSL distributions"
+    - "File system artifacts showing Linux tool execution"
+    - "Network traffic logs showing connections from WSL processes"
+    - "PowerShell or cmd logs showing wsl.exe invocations"
+  
+  strengthens_evidence:
+    - "Timeline analysis of WSL distribution installations"
+    - "User activity showing WSL command usage"
+    - "File operations between Windows and Linux file systems"
 
 metadata:
   windows_versions:
@@ -59,7 +74,6 @@ metadata:
     - "Windows Server 2022"
 
   introduced: "Windows 10 Anniversary Update (2016)"
-
   criticality: "high"
 
   investigation_types:
@@ -67,9 +81,10 @@ metadata:
     - "incident-response"
     - "behavioral-analysis"
     - "lateral-movement"
+    - "anti-forensics"
+    - "privilege-escalation"
 
   tags:
-    - "virtualization"
     - "wsl"
     - "linux"
     - "cross-platform"
@@ -85,9 +100,6 @@ metadata:
     - title: "WSL Security Considerations"
       url: "https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel"
       type: "official"
-    - title: "Linux-Windows Hybrid Attack Techniques"
-      url: "https://www.sans.org/white-papers/39847/"
-      type: "research"
 
   retention:
     default_location: "Registry hive files (SOFTWARE, NTUSER.DAT, SYSTEM)"
@@ -97,8 +109,6 @@ metadata:
   related_artifacts:
     - "hyperv"
     - "windows_containers"
-    - "virtualization_security"
-    - "developer_tools"
 
 author:
   name: "Tonmoy Jitu"
@@ -108,4 +118,4 @@ author:
 contribution:
   date_added: "2025-06-07"
   last_updated: "2025-06-07"
-  version: "1.0"
+  version: "3.0"
