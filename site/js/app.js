@@ -98,8 +98,8 @@ function createArtifactElement(artifact, index) {
     
     const metadata = artifact.metadata || {};
     const criticality = metadata.criticality || 'unspecified';
-    const primaryPath = artifact.paths ? artifact.paths[0] : 'Unknown path';
-    
+    const primaryPath = artifact.paths && artifact.paths[0] ?
+        artifact.paths[0].trim() : 'Unknown path';
     // Create tags from investigation types and other metadata
     const tags = [];
     if (metadata.investigation_types) {
@@ -256,19 +256,19 @@ function populateModalHeader(artifact) {
     const header = document.getElementById('modal-header');
     const metadata = artifact.metadata || {};
     const criticality = metadata.criticality || 'unspecified';
-    const primaryPath = artifact.paths ? artifact.paths[0] : 'Unknown path';
-    const additionalPaths = artifact.paths ? artifact.paths.slice(1) : [];
-    
+    const cleanPaths = artifact.paths ?
+        artifact.paths
+            .map(path => path.trim())
+            .filter(path => path.length > 0)
+        : [];
+
     header.innerHTML = `
         <h2 class="artifact-title">${artifact.title}</h2>
         <div class="artifact-badges">
             <span class="badge badge-category">${artifact.category}</span>
             ${criticality !== 'unspecified' ? `<span class="badge badge-criticality">${criticality} priority</span>` : ''}
         </div>
-        <div class="artifact-paths">
-            ${primaryPath}
-            ${additionalPaths.map(path => `<br>${path}`).join('')}
-        </div>
+        <div class="artifact-paths">${cleanPaths.join('\n')}</div>
     `;
 }
 
