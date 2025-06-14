@@ -246,6 +246,9 @@ function showEnhancedModal(artifact) {
     
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${window.scrollY}px`;
+    document.body.style.width = '100%';
 }
 
 // Populate modal header
@@ -524,6 +527,32 @@ function setupModalNavigation() {
             this.classList.add('active');
         });
     });
+    
+    // Add touch handling for mobile horizontal scrolling
+    const sidebar = document.querySelector('.modal-sidebar');
+    if (sidebar) {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        
+        sidebar.addEventListener('touchstart', (e) => {
+            isDown = true;
+            startX = e.touches[0].pageX - sidebar.offsetLeft;
+            scrollLeft = sidebar.scrollLeft;
+        });
+        
+        sidebar.addEventListener('touchmove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.touches[0].pageX - sidebar.offsetLeft;
+            const walk = (x - startX) * 2;
+            sidebar.scrollLeft = scrollLeft - walk;
+        });
+        
+        sidebar.addEventListener('touchend', () => {
+            isDown = false;
+        });
+    }
 }
 
 // Show content section
@@ -831,7 +860,17 @@ function hideModal() {
     const modal = document.getElementById('modal');
     if (modal) {
         modal.style.display = 'none';
+        
+        // Restore scrolling for mobile
+        const scrollY = document.body.style.top;
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
         document.body.style.overflow = 'auto';
+        
+        if (scrollY) {
+            window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        }
     }
 }
 
