@@ -464,14 +464,19 @@ header {
 
 .item-path {
     font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', monospace;
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    background: var(--bg-primary);
-    padding: 12px 16px;
-    border-radius: 8px;
-    margin-bottom: 16px;
-    word-break: break-all;
-    border: 1px solid var(--border);
+     font-size: 0.875rem;
+     color: var(--text-secondary);
+     background: var(--bg-primary);
+     padding: 12px 16px;
+     border-radius: 8px;
+     margin-bottom: 16px;
+     border: 1px solid var(--border);
+     word-break: break-word;
+     overflow-wrap: break-word;
+     white-space: pre-wrap;
+     hyphens: none;
+     overflow-x: auto;
+     -webkit-overflow-scrolling: touch;
 }
 
 .item-description {
@@ -694,13 +699,20 @@ header {
 }
 
 .artifact-paths {
-    font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', monospace;
     font-size: 0.875rem;
     color: var(--text-secondary);
     background: var(--bg-primary);
-    padding: 16px;
+    padding: 12px 16px;
     border-radius: 8px;
+    margin-bottom: 16px;
     border: 1px solid var(--border);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    hyphens: none;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
 }
 
 /* Content Area */
@@ -1280,10 +1292,10 @@ header {
     .artifact-paths {
         font-size: 0.8rem;
         padding: 12px;
-        word-break: break-all; /* Force break long paths */
+        word-break: break-word; /* Force break long paths */
         white-space: pre-wrap; /* Preserve line breaks */
         overflow-wrap: break-word; /* Modern browsers */
-        hyphens: auto; /* Add hyphens if supported */
+        hyphens: none; /* Add hyphens if supported */
     }
     
     /* Make content area properly scrollable */
@@ -1329,10 +1341,10 @@ header {
     .example-item {
         padding: 12px;
         font-size: 0.8rem;
-        /* FIXED: Example text overflow */
-        word-break: break-all;
+        word-break: break-word; /* FIXED: Better breaking */
         overflow-wrap: break-word;
         white-space: pre-wrap;
+        hyphens: none; /* FIXED: No hyphens */
     }
     
     /* Close button adjustments */
@@ -1394,20 +1406,4 @@ header {
     .correlation-section {
         padding: 12px;
     }
-}
-
-/* FIXED: Registry path overflow for all screen sizes */
-.artifact-paths,
-.item-path {
-    word-break: break-all;
-    overflow-wrap: break-word;
-    white-space: pre-wrap;
-    hyphens: auto;
-}
-
-/* FIXED: Example items overflow */
-.example-item {
-    word-break: break-all;
-    overflow-wrap: break-word;
-    white-space: pre-wrap;
 }
