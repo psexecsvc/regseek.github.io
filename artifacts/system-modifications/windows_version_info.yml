@@ -106,10 +106,10 @@ metadata:
 
   references:
     - title: "Windows Version Information"
-      url: "https://docs.microsoft.com/en-us/windows/win32/sysinfo/getting-the-system-version"
+      url: "https://learn.microsoft.com/en-us/windows/win32/sysinfo/getting-the-system-version"
       type: "official"
     - title: "Windows Version History and Security Features"
-      url: "https://docs.microsoft.com/en-us/windows/release-health/"
+      url: "https://learn.microsoft.com/en-us/windows/release-health/"
       type: "official"
 
   retention:

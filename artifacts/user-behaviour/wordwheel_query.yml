@@ -104,7 +104,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Start Menu Search"
-      url: "https://docs.microsoft.com/en-us/windows/configuration/start-menu-search/"
+      url: "https://learn.microsoft.com/en-us/windows/configuration/start-menu-search/"
       type: "official"
     - title: "Windows Search Artifacts for Digital Forensics"
       url: "https://www.forensicfocus.com/articles/windows-search-artifacts/"

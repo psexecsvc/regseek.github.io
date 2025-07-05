@@ -105,7 +105,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: IPv6 Transition Technologies"
-      url: "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379548(v=ws.10)"
+      url: "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379548(v=ws.10)"
       type: "official"
     - title: "IPv6 Tunnel Abuse for Covert Channels"
       url: "https://www.sans.org/white-papers/33649/"

@@ -112,10 +112,10 @@ metadata:
 
   references:
     - title: "PowerShell Execution Policies"
-      url: "https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies"
+      url: "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies"
       type: "official"
     - title: "PowerShell Security Best Practices"
-      url: "https://docs.microsoft.com/en-us/powershell/scripting/security/powershell-security-best-practices"
+      url: "https://learn.microsoft.com/en-us/powershell/scripting/security/powershell-security-best-practices"
       type: "official"
     - title: "MITRE ATT&CK: PowerShell"
       url: "https://attack.mitre.org/techniques/T1059/001/"

@@ -43,7 +43,7 @@ details:
       url: "https://ericzimmerman.github.io/#!index.md"
       description: "Advanced registry analysis and browsing tool"
     - name: "Autoruns"
-      url: "https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns"
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns"
       description: "Microsoft Sysinternals comprehensive service enumeration tool"
     - name: "Service Security Analyzer"
       description: "Tools for analyzing service security configurations and permissions"
@@ -112,7 +112,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Windows Services"
-      url: "https://docs.microsoft.com/en-us/windows/win32/services/services"
+      url: "https://learn.microsoft.com/en-us/windows/win32/services/services"
       type: "official"
     - title: "MITRE ATT&CK: Windows Service"
       url: "https://attack.mitre.org/techniques/T1543/003/"

@@ -117,10 +117,10 @@ metadata:
 
   references:
     - title: "TCP/IP Registry Parameters"
-      url: "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc739819(v=ws.10)"
+      url: "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc739819(v=ws.10)"
       type: "official"
     - title: "Network Interface Identification"
-      url: "https://docs.microsoft.com/en-us/windows-hardware/drivers/network/network-interface-identification"
+      url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/network/network-interface-identification"
       type: "official"
     - title: "Windows Network Forensics"
       url: "https://www.sans.org/blog/digital-forensics-network-configuration/"

@@ -105,7 +105,7 @@ metadata:
 
   references:
     - title: "Volume Shadow Copy Service"
-      url: "https://docs.microsoft.com/en-us/windows/win32/vss/volume-shadow-copy-service-overview"
+      url: "https://learn.microsoft.com/en-us/windows/win32/vss/volume-shadow-copy-service-overview"
       type: "official"
     - title: "Shadow Copy Forensics and Data Recovery"
       url: "https://www.sans.org/white-papers/33649/"

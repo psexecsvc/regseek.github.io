@@ -86,7 +86,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Internet Explorer Security"
-      url: "https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/"
+      url: "https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/"
       type: "official"
 
   retention:

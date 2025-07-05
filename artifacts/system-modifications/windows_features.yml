@@ -100,10 +100,10 @@ metadata:
 
   references:
     - title: "Windows Features"
-      url: "https://docs.microsoft.com/en-us/windows/application-management/manage-optional-features"
+      url: "https://learn.microsoft.com/en-us/windows/application-management/manage-optional-features"
       type: "official"
     - title: "Windows Server Roles and Features"
-      url: "https://docs.microsoft.com/en-us/windows-server/get-started/server-role-upgradeability-table"
+      url: "https://learn.microsoft.com/en-us/windows-server/get-started/server-role-upgradeability-table"
       type: "official"
     - title: "Windows Attack Surface Analysis"
       url: "https://www.sans.org/white-papers/36240/"

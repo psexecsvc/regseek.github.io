@@ -44,7 +44,7 @@ details:
       url: "https://ericzimmerman.github.io/#!index.md"
       description: "Advanced registry browser for COM object analysis and CLSID enumeration"
     - name: "Autoruns"
-      url: "https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns"
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns"
       description: "Microsoft Sysinternals tool with comprehensive COM object enumeration"
     - name: "RegDllView"
       url: "https://www.nirsoft.net/utils/registered_dll_view.html"
@@ -120,10 +120,10 @@ metadata:
 
   references:
     - title: "Component Object Model (COM)"
-      url: "https://docs.microsoft.com/en-us/windows/win32/com/component-object-model--com--portal"
+      url: "https://learn.microsoft.com/en-us/windows/win32/com/component-object-model--com--portal"
       type: "official"
     - title: "COM Security and Authentication"
-      url: "https://docs.microsoft.com/en-us/windows/win32/com/security-in-com"
+      url: "https://learn.microsoft.com/en-us/windows/win32/com/security-in-com"
       type: "official"
     - title: "MITRE ATT&CK: Component Object Model Hijacking"
       url: "https://attack.mitre.org/techniques/T1546/015/"

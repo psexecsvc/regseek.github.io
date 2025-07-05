@@ -44,7 +44,7 @@ details:
     - name: "sdbinst.exe"
       description: "Windows shim database installation and management utility"
     - name: "Application Compatibility Toolkit"
-      url: "https://docs.microsoft.com/en-us/windows/deployment/planning/act-technical-reference"
+      url: "https://learn.microsoft.com/en-us/windows/deployment/planning/act-technical-reference"
       description: "Microsoft toolkit for application compatibility analysis"
     - name: "ShimView"
       description: "Tools for analyzing installed compatibility shims and databases"
@@ -107,10 +107,10 @@ metadata:
 
   references:
     - title: "Application Compatibility in Windows"
-      url: "https://docs.microsoft.com/en-us/windows/deployment/planning/compatibility-fixes-for-windows-10"
+      url: "https://learn.microsoft.com/en-us/windows/deployment/planning/compatibility-fixes-for-windows-10"
       type: "official"
     - title: "Windows Application Compatibility"
-      url: "https://docs.microsoft.com/en-us/windows/deployment/planning/act-technical-reference"
+      url: "https://learn.microsoft.com/en-us/windows/deployment/planning/act-technical-reference"
       type: "official"
     - title: "Shim Database Analysis"
       url: "https://www.sans.org/blog/application-compatibility-shims/"

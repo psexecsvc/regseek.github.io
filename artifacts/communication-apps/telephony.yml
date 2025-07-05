@@ -98,7 +98,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Telephony API (TAPI)"
-      url: "https://docs.microsoft.com/en-us/windows/win32/tapi/telephony-application-programming-interfaces"
+      url: "https://learn.microsoft.com/en-us/windows/win32/tapi/telephony-application-programming-interfaces"
       type: "official"
     - title: "VoIP Security and Forensics Analysis"
       url: "https://www.sans.org/white-papers/33649/"

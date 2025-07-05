@@ -41,7 +41,7 @@ details:
       url: "https://ericzimmerman.github.io/#!index.md"
       description: "Advanced registry browser for LSA configuration analysis"
     - name: "Autoruns"
-      url: "https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns"
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns"
       description: "Microsoft Sysinternals tool with LSA provider enumeration"
     - name: "LSA Secrets Dumper"
       description: "Tools for extracting and analyzing LSA secrets and configuration"
@@ -115,10 +115,10 @@ metadata:
 
   references:
     - title: "Local Security Authority (LSA)"
-      url: "https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/local-security-authority"
+      url: "https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/local-security-authority"
       type: "official"
     - title: "Authentication Packages"
-      url: "https://docs.microsoft.com/en-us/windows/win32/secauthn/authentication-packages"
+      url: "https://learn.microsoft.com/en-us/windows/win32/secauthn/authentication-packages"
       type: "official"
     - title: "MITRE ATT&CK: LSA Secrets"
       url: "https://attack.mitre.org/techniques/T1003/004/"

@@ -104,7 +104,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: USB Device Installation"
-      url: "https://docs.microsoft.com/en-us/windows-hardware/drivers/usbcon/"
+      url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/"
       type: "official"
     - title: "USB Device Timeline Reconstruction"
       url: "https://www.sans.org/white-papers/33584/"

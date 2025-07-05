@@ -46,7 +46,7 @@ details:
       url: "https://ericzimmerman.github.io/#!index.md"
       description: "Advanced registry browser for shell extension analysis"
     - name: "Autoruns"
-      url: "https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns"
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns"
       description: "Microsoft Sysinternals tool with shell extension enumeration"
     - name: "RegDllView"
       url: "https://www.nirsoft.net/utils/registered_dll_view.html"
@@ -119,10 +119,10 @@ metadata:
 
   references:
     - title: "Shell Extensions"
-      url: "https://docs.microsoft.com/en-us/windows/win32/shell/shell-exts"
+      url: "https://learn.microsoft.com/en-us/windows/win32/shell/shell-exts"
       type: "official"
     - title: "Context Menu Handlers"
-      url: "https://docs.microsoft.com/en-us/windows/win32/shell/context-menu-handlers"
+      url: "https://learn.microsoft.com/en-us/windows/win32/shell/context-menu-handlers"
       type: "official"
     - title: "Shell Extension Security"
       url: "https://www.sans.org/blog/shell-extension-persistence/"

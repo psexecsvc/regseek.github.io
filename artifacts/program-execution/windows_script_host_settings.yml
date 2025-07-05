@@ -112,10 +112,10 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Windows Script Host"
-      url: "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc738350(v=ws.10)"
+      url: "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc738350(v=ws.10)"
       type: "official"
     - title: "Windows Script Host Security"
-      url: "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc976135(v=technet.10)"
+      url: "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc976135(v=technet.10)"
       type: "official"
     - title: "MITRE ATT&CK: Windows Script Host"
       url: "https://attack.mitre.org/techniques/T1059/005/"

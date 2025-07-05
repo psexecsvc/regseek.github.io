@@ -14,10 +14,11 @@ details:
     reconnection. Network signatures track connection history and first/last connection times.
 
   forensic_value: |
-    Critical for establishing user location patterns, travel history, and potential access points
-    visited by suspects. WiFi profiles reveal geographic movement, lifestyle patterns, and
-    association with specific locations or organizations. Can indicate compromise through rogue
-    access points or reveal investigative leads about suspect activities.
+    Useful for identifying WiFi networks a device has been configured to connect to, which may
+    provide investigative leads about potential locations. WiFi profiles can indicate network
+    exposure and help correlate device activity with specific environments. Note: WiFi
+    profile data provides limited location reliability and requires extensive correlation
+    for meaningful geographic conclusions.
 
   structure: |
     Network profiles stored with GUIDs as registry keys containing ProfileName (SSID),
@@ -50,12 +51,13 @@ details:
 
 limitations:
   - "WiFi profiles do NOT prove user was physically present at network locations"
-  - "Network connection doesn't indicate duration of stay or actual internet usage"
   - "SSID names can be spoofed or duplicated across different physical locations"
-  - "Connection timestamps don't prove sustained network activity"
-  - "Profile creation doesn't guarantee successful authentication or data transmission"
-  - "WiFi credentials don't indicate what online activities occurred"
+  - "Connection timestamps do NOT prove sustained network activity or duration of stay"
+  - "Profile creation does NOT guarantee successful authentication or data transmission"
+  - "WiFi data provides WEAK evidence for establishing location patterns or travel history"
   - "Network categories may be incorrect or manually modified"
+  - "WiFi credentials do NOT indicate what online activities occurred"
+  - "Same SSID names exist in multiple unrelated physical locations worldwide"
 
 correlation:
   required_for_definitive_location_proof:
@@ -80,7 +82,7 @@ metadata:
     - "Windows 11"
 
   introduced: "Windows Vista"
-  criticality: "medium"
+  criticality: "low"
 
   investigation_types:
     - "insider-threat"
@@ -98,7 +100,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Network Location Awareness"
-      url: "https://docs.microsoft.com/en-us/windows/win32/nla/network-location-awareness-portal"
+      url: "https://learn.microsoft.com/en-us/windows/win32/nla/network-location-awareness-portal"
       type: "official"
     - title: "WiFi Forensics and Location Analysis"
       url: "https://www.sans.org/white-papers/33894/"
@@ -125,5 +127,5 @@ author:
 
 contribution:
   date_added: "2025-01-15"
-  last_updated: "2025-06-12"
+  last_updated: "2025-07-06"
   version: "3.0"

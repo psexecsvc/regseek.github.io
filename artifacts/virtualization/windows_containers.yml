@@ -95,7 +95,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Windows Containers"
-      url: "https://docs.microsoft.com/en-us/virtualization/windowscontainers/"
+      url: "https://learn.microsoft.com/en-us/virtualization/windowscontainers/"
       type: "official"
     - title: "Docker Desktop for Windows"
       url: "https://docs.docker.com/desktop/windows/"

@@ -40,7 +40,7 @@ details:
       url: "https://ericzimmerman.github.io/#!index.md"
       description: "Advanced registry analysis tool"
     - name: "Autoruns"
-      url: "https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns"
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns"
       description: "Microsoft Sysinternals tool with BHO enumeration"
     - name: "BrowserAddonsView"
       url: "https://www.nirsoft.net/utils/browser_addons_view.html"
@@ -96,7 +96,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Browser Helper Objects"
-      url: "https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/bb250436(v=vs.85)"
+      url: "https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/bb250436(v=vs.85)"
       type: "official"
     - title: "Browser Helper Object Malware Analysis"
       url: "https://www.sans.org/white-papers/33439/"

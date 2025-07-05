@@ -108,7 +108,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Remote Desktop Services"
-      url: "https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/"
+      url: "https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/"
       type: "official"
     - title: "RDP Attacks and Lateral Movement"
       url: "https://attack.mitre.org/techniques/T1021/001/"

@@ -107,10 +107,10 @@ metadata:
 
   references:
     - title: "Windows Prefetch"
-      url: "https://docs.microsoft.com/en-us/windows/win32/memory/prefetching"
+      url: "https://learn.microsoft.com/en-us/windows/win32/memory/prefetching"
       type: "official"
     - title: "SuperFetch and SysMain"
-      url: "https://docs.microsoft.com/en-us/windows/win32/services/service-security-and-access-rights"
+      url: "https://learn.microsoft.com/en-us/windows/win32/services/service-security-and-access-rights"
       type: "official"
     - title: "Prefetch Analysis in Digital Forensics"
       url: "https://www.sans.org/blog/prefetch-analysis-digital-forensics/"

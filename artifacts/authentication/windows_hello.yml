@@ -102,10 +102,10 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Windows Hello"
-      url: "https://docs.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/"
+      url: "https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/"
       type: "official"
     - title: "Windows Hello for Business Deployment"
-      url: "https://docs.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-planning-guide"
+      url: "https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-planning-guide"
       type: "official"
     - title: "Biometric Authentication Security Analysis"
       url: "https://www.sans.org/white-papers/36427/"

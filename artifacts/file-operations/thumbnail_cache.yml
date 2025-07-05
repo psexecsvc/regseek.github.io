@@ -109,7 +109,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Thumbnail Cache"
-      url: "https://docs.microsoft.com/en-us/windows/win32/shell/thumbnail-cache"
+      url: "https://learn.microsoft.com/en-us/windows/win32/shell/thumbnail-cache"
       type: "official"
     - title: "Windows Thumbnail Cache Forensics"
       url: "https://www.forensicfocus.com/articles/windows-thumbnail-cache-forensics/"

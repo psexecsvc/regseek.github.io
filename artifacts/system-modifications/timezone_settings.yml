@@ -105,7 +105,7 @@ metadata:
 
   references:
     - title: "Windows Time Service"
-      url: "https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/"
+      url: "https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/"
       type: "official"
     - title: "Time Zone Forensics and Timeline Analysis"
       url: "https://www.sans.org/white-papers/33927/"

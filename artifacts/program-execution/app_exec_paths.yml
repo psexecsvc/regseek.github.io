@@ -110,10 +110,10 @@ metadata:
 
   references:
     - title: "App Paths Registry Key"
-      url: "https://docs.microsoft.com/en-us/windows/win32/shell/app-registration"
+      url: "https://learn.microsoft.com/en-us/windows/win32/shell/app-registration"
       type: "official"
     - title: "Application Registration"
-      url: "https://docs.microsoft.com/en-us/windows/win32/com/application-registration"
+      url: "https://learn.microsoft.com/en-us/windows/win32/com/application-registration"
       type: "official"
     - title: "Windows Execution Paths Analysis"
       url: "https://www.sans.org/blog/application-execution-paths/"

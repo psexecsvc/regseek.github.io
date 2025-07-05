@@ -102,7 +102,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: MAPI"
-      url: "https://docs.microsoft.com/en-us/office/client-developer/outlook/mapi/mapi-reference"
+      url: "https://learn.microsoft.com/en-us/office/client-developer/outlook/mapi/mapi-reference"
       type: "official"
     - title: "Email Client Forensics and Investigation"
       url: "https://www.forensicfocus.com/articles/email-client-forensics/"

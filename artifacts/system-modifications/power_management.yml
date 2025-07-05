@@ -109,7 +109,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Power Management"
-      url: "https://docs.microsoft.com/en-us/windows/win32/power/power-management-portal"
+      url: "https://learn.microsoft.com/en-us/windows/win32/power/power-management-portal"
       type: "official"
     - title: "Windows Power Settings and Forensic Analysis"
       url: "https://www.forensicfocus.com/articles/power-management-forensics/"

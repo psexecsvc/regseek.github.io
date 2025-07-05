@@ -1,6 +1,6 @@
-title: "DNS Client Configuration and Cache Settings"
+title: "DNS Client Configuration Settings"
 category: "network-infrastructure"
-description: "DNS client settings, cache configuration, name resolution preferences, and DNS security policies"
+description: "DNS client configuration, name resolution preferences, and DNS security policies (not actual DNS cache contents)"
 
 paths:
   - "HKLM\\SYSTEM\\CurrentControlSet\\Services\\Dnscache\\Parameters"
@@ -10,9 +10,10 @@ paths:
 
 details:
   what: |
-    DNS client configuration encompasses name resolution settings including cache behavior, 
+    DNS client configuration encompasses name resolution settings including cache behavior parameters, 
     DNS server preferences, DNS-over-HTTPS (DoH) configuration, cache size limits, negative 
-    caching policies, and DNS security settings controlling system-wide name resolution.
+    caching policies, and DNS security settings. Note: This registry location contains DNS 
+    client configuration settings, NOT the actual DNS cache contents (which are stored in memory).
 
   forensic_value: |
     Critical for investigating DNS hijacking attacks, malicious DNS server usage, DNS tunneling 
@@ -49,12 +50,13 @@ details:
 
 limitations:
   - "DNS configuration settings do NOT prove malicious domains were accessed"
+  - "These registry settings do NOT contain actual DNS cache contents or query history"
   - "Cache settings don't indicate what DNS queries were actually made"
   - "DoH configuration doesn't show encrypted DNS queries that occurred"
   - "DNS server changes may be legitimate network administration"
   - "Policy settings don't prove DNS filtering was actively enforced"
   - "Malicious DNS servers may be configured but never used"
-  - "Cache size settings don't reveal historical DNS query patterns"
+  - "Actual DNS cache contents are volatile and stored in memory, not in these registry locations"
 
 correlation:
   required_for_definitive_execution_proof:
@@ -106,7 +108,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: DNS Client Service"
-      url: "https://docs.microsoft.com/en-us/windows-server/networking/dns/"
+      url: "https://learn.microsoft.com/en-us/windows-server/networking/dns/"
       type: "official"
     - title: "DNS Security and Attack Techniques"
       url: "https://www.sans.org/white-papers/33896/"
@@ -133,5 +135,5 @@ author:
 
 contribution:
   date_added: "2025-01-15"
-  last_updated: "2025-06-12"
+  last_updated: "2025-07-06"
   version: "3.0"

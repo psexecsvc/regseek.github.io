@@ -41,7 +41,7 @@ details:
       url: "https://ericzimmerman.github.io/#!index.md"
       description: "Advanced registry browser with USB device enumeration analysis"
     - name: "USBView"
-      url: "https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/usbview"
+      url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/usbview"
       description: "Microsoft USB device viewer showing device tree and capabilities"
     - name: "USBDeview"
       url: "https://www.nirsoft.net/utils/usb_devices_view.html"
@@ -116,10 +116,10 @@ metadata:
 
   references:
     - title: "USB Device Registry Entries"
-      url: "https://docs.microsoft.com/en-us/windows-hardware/drivers/install/standard-usb-identifiers"
+      url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/install/standard-usb-identifiers"
       type: "official"
     - title: "USB Device Capabilities"
-      url: "https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/ns-wdm-_device_capabilities"
+      url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/ns-wdm-_device_capabilities"
       type: "official"
     - title: "USB Forensics and Analysis"
       url: "https://www.sans.org/blog/digital-forensics-usb-device-analysis/"

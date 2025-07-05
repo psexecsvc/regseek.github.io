@@ -107,7 +107,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Run Dialog"
-      url: "https://docs.microsoft.com/en-us/windows/win32/shell/launch"
+      url: "https://learn.microsoft.com/en-us/windows/win32/shell/launch"
       type: "official"
     - title: "Windows Run Dialog Forensics"
       url: "https://www.forensicfocus.com/articles/windows-run-dialog-analysis/"

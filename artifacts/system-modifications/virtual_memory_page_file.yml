@@ -108,7 +108,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Virtual Memory"
-      url: "https://docs.microsoft.com/en-us/windows/win32/memory/virtual-memory"
+      url: "https://learn.microsoft.com/en-us/windows/win32/memory/virtual-memory"
       type: "official"
     - title: "Windows Page File Forensics"
       url: "https://www.sans.org/white-papers/33649/"

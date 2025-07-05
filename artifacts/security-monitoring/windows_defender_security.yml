@@ -107,10 +107,10 @@ metadata:
 
   references:
     - title: "Windows Defender Antivirus Management"
-      url: "https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/"
+      url: "https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/"
       type: "official"
     - title: "User Account Control Security"
-      url: "https://docs.microsoft.com/en-us/windows/security/identity-protection/user-account-control/"
+      url: "https://learn.microsoft.com/en-us/windows/security/identity-protection/user-account-control/"
       type: "official"
     - title: "MITRE ATT&CK: Disable or Modify Tools"
       url: "https://attack.mitre.org/techniques/T1562/001/"

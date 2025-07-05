@@ -54,7 +54,7 @@ details:
     - name: "Get-ScheduledTask PowerShell"
       description: "PowerShell cmdlet for comprehensive task analysis"
     - name: "Autoruns"
-      url: "https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns"
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns"
       description: "Microsoft Sysinternals tool including scheduled task enumeration"
 
 limitations:
@@ -116,7 +116,7 @@ metadata:
 
   references:
     - title: "Task Scheduler for Windows Vista"
-      url: "https://docs.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page"
+      url: "https://learn.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page"
       type: "official"
     - title: "MITRE ATT&CK: Scheduled Task/Job"
       url: "https://attack.mitre.org/techniques/T1053/005/"

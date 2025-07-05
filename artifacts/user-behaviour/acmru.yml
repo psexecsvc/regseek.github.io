@@ -99,7 +99,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Common File Dialogs"
-      url: "https://docs.microsoft.com/en-us/windows/win32/dlgbox/common-dialog-box-library"
+      url: "https://learn.microsoft.com/en-us/windows/win32/dlgbox/common-dialog-box-library"
       type: "official"
     - title: "Windows MRU Forensics Analysis"
       url: "https://www.forensicfocus.com/articles/windows-mru-forensics/"

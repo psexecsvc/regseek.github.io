@@ -108,10 +108,10 @@ metadata:
 
   references:
     - title: "Background Intelligent Transfer Service"
-      url: "https://docs.microsoft.com/en-us/windows/win32/bits/background-intelligent-transfer-service-portal"
+      url: "https://learn.microsoft.com/en-us/windows/win32/bits/background-intelligent-transfer-service-portal"
       type: "official"
     - title: "BITS Security Considerations"
-      url: "https://docs.microsoft.com/en-us/windows/win32/bits/security-considerations"
+      url: "https://learn.microsoft.com/en-us/windows/win32/bits/security-considerations"
       type: "official"
     - title: "BITS Malware Analysis"
       url: "https://www.sans.org/blog/bits-malware-analysis/"

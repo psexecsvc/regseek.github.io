@@ -109,10 +109,10 @@ metadata:
 
   references:
     - title: "Windows Defender Firewall"
-      url: "https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security"
+      url: "https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security"
       type: "official"
     - title: "Firewall Rules and Policies"
-      url: "https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/best-practices-configuring"
+      url: "https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/best-practices-configuring"
       type: "official"
     - title: "Firewall Security Analysis"
       url: "https://www.sans.org/blog/windows-firewall-analysis/"

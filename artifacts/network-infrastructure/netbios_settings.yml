@@ -108,7 +108,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: NetBIOS over TCP/IP"
-      url: "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc759150(v=ws.10)"
+      url: "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc759150(v=ws.10)"
       type: "official"
     - title: "NetBIOS Attacks and Lateral Movement"
       url: "https://attack.mitre.org/techniques/T1021/002/"

@@ -101,10 +101,10 @@ metadata:
 
   references:
     - title: "Windows Activation"
-      url: "https://docs.microsoft.com/en-us/windows/deployment/volume-activation/"
+      url: "https://learn.microsoft.com/en-us/windows/deployment/volume-activation/"
       type: "official"
     - title: "Volume Activation Management Tool"
-      url: "https://docs.microsoft.com/en-us/windows/deployment/volume-activation/volume-activation-management-tool"
+      url: "https://learn.microsoft.com/en-us/windows/deployment/volume-activation/volume-activation-management-tool"
       type: "official"
     - title: "Windows Licensing and Compliance"
       url: "https://www.microsoft.com/en-us/licensing/learn-more/"

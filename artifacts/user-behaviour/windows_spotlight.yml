@@ -88,7 +88,7 @@ metadata:
 
   references:
     - title: "Windows Spotlight Documentation"
-      url: "https://docs.microsoft.com/en-us/windows/configuration/windows-spotlight"
+      url: "https://learn.microsoft.com/en-us/windows/configuration/windows-spotlight"
       type: "official"
 
   retention:

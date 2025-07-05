@@ -110,7 +110,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Print Spooler Architecture"
-      url: "https://docs.microsoft.com/en-us/windows-hardware/drivers/print/introduction-to-the-print-spooler"
+      url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/print/introduction-to-the-print-spooler"
       type: "official"
     - title: "Print Job Forensics and Investigation"
       url: "https://www.forensicfocus.com/articles/print-job-forensics/"

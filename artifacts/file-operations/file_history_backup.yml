@@ -97,7 +97,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: File History"
-      url: "https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-filehistory"
+      url: "https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-filehistory"
       type: "official"
     - title: "Windows Backup and Recovery Forensics"
       url: "https://www.forensicfocus.com/articles/windows-backup-forensics/"

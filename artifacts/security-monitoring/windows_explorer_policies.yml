@@ -109,10 +109,10 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Group Policy Settings Reference"
-      url: "https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-configuration-service-provider"
+      url: "https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-configuration-service-provider"
       type: "official"
     - title: "Windows Explorer Security Policies"
-      url: "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789189(v=ws.11)"
+      url: "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789189(v=ws.11)"
       type: "official"
     - title: "Group Policy Security Analysis"
       url: "https://www.sans.org/white-papers/33492/"

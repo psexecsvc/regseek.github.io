@@ -104,13 +104,13 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: BitLocker"
-      url: "https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/"
+      url: "https://learn.microsoft.com/en-us/windows/security/information-protection/bitlocker/"
       type: "official"
     - title: "BitLocker Security and Forensic Considerations"
       url: "https://www.sans.org/white-papers/33649/"
       type: "research"
     - title: "Enterprise BitLocker Management"
-      url: "https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview"
+      url: "https://learn.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview"
       type: "official"
 
   retention:

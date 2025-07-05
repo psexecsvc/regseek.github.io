@@ -40,7 +40,7 @@ details:
 
   tools:
     - name: "Autoruns"
-      url: "https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns"
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns"
       description: "Microsoft Sysinternals comprehensive autostart enumeration tool"
     - name: "Registry Explorer"
       url: "https://ericzimmerman.github.io/#!index.md"
@@ -49,7 +49,7 @@ details:
       url: "https://github.com/keydet89/RegRipper3.0"
       description: "Registry analysis with winlogon.pl and userinit.pl plugins"
     - name: "Process Monitor"
-      url: "https://docs.microsoft.com/en-us/sysinternals/downloads/procmon"
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/procmon"
       description: "Real-time process and file system monitoring during logon"
     - name: "LogonExpert"
       description: "Specialized tools for Windows logon process analysis"
@@ -119,7 +119,7 @@ metadata:
 
   references:
     - title: "Windows Logon Process"
-      url: "https://docs.microsoft.com/en-us/windows/win32/secauthn/winlogon-and-credential-providers"
+      url: "https://learn.microsoft.com/en-us/windows/win32/secauthn/winlogon-and-credential-providers"
       type: "official"
     - title: "MITRE ATT&CK: Winlogon Helper DLL"
       url: "https://attack.mitre.org/techniques/T1547/004/"

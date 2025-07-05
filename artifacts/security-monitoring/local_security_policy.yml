@@ -109,13 +109,13 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Local Security Policy"
-      url: "https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/"
+      url: "https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/"
       type: "official"
     - title: "Windows Security Policy Forensics"
       url: "https://www.sans.org/white-papers/33492/"
       type: "research"
     - title: "LSA Security and Authentication"
-      url: "https://docs.microsoft.com/en-us/windows/win32/secauth/lsa-authentication"
+      url: "https://learn.microsoft.com/en-us/windows/win32/secauth/lsa-authentication"
       type: "official"
 
   retention:

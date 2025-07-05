@@ -46,7 +46,7 @@ details:
     - name: "WMI-Persistence Toolkit"
       description: "Specialized tools for WMI persistence detection and analysis"
     - name: "Autoruns"
-      url: "https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns"
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns"
       description: "Microsoft Sysinternals tool with WMI event subscription enumeration"
     - name: "WMI Event Monitor"
       description: "Real-time WMI event monitoring and subscription analysis tools"
@@ -114,10 +114,10 @@ metadata:
 
   references:
     - title: "Windows Management Instrumentation"
-      url: "https://docs.microsoft.com/en-us/windows/win32/wmisdk/wmi-start-page"
+      url: "https://learn.microsoft.com/en-us/windows/win32/wmisdk/wmi-start-page"
       type: "official"
     - title: "WMI Event Subscriptions"
-      url: "https://docs.microsoft.com/en-us/windows/win32/wmisdk/receiving-event-notifications-through-wmi"
+      url: "https://learn.microsoft.com/en-us/windows/win32/wmisdk/receiving-event-notifications-through-wmi"
       type: "official"
     - title: "MITRE ATT&CK: Windows Management Instrumentation Event Subscription"
       url: "https://attack.mitre.org/techniques/T1546/003/"

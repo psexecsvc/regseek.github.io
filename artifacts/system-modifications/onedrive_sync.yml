@@ -91,10 +91,10 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: OneDrive"
-      url: "https://docs.microsoft.com/en-us/onedrive/"
+      url: "https://learn.microsoft.com/en-us/onedrive/"
       type: "official"
     - title: "OneDrive Security and Compliance"
-      url: "https://docs.microsoft.com/en-us/onedrive/security/"
+      url: "https://learn.microsoft.com/en-us/onedrive/security/"
       type: "official"
 
   retention:

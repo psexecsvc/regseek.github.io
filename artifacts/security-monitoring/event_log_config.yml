@@ -116,7 +116,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Windows Event Logging"
-      url: "https://docs.microsoft.com/en-us/windows/win32/eventlog/event-logging"
+      url: "https://learn.microsoft.com/en-us/windows/win32/eventlog/event-logging"
       type: "official"
     - title: "Windows Event Log Analysis for Incident Response"
       url: "https://www.sans.org/white-papers/32949/"

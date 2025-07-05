@@ -41,7 +41,7 @@ details:
     - name: "net share"
       description: "Command-line utility for share enumeration and management"
     - name: "ShareEnum"
-      url: "https://docs.microsoft.com/en-us/sysinternals/downloads/shareenum"
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/shareenum"
       description: "Microsoft Sysinternals tool for network share discovery"
     - name: "Registry Explorer"
       url: "https://ericzimmerman.github.io/#!index.md"
@@ -111,7 +111,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: SMB File Sharing"
-      url: "https://docs.microsoft.com/en-us/windows-server/storage/file-server/"
+      url: "https://learn.microsoft.com/en-us/windows-server/storage/file-server/"
       type: "official"
     - title: "SMB Security and Lateral Movement"
       url: "https://attack.mitre.org/techniques/T1021/002/"

@@ -89,10 +89,10 @@ metadata:
 
   references:
     - title: "Windows Defender Application Guard Documentation"
-      url: "https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-application-guard/"
+      url: "https://learn.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-application-guard/"
       type: "official"
     - title: "Application Guard Enterprise Configuration"
-      url: "https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard"
+      url: "https://learn.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard"
       type: "official"
 
   retention:

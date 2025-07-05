@@ -42,7 +42,7 @@ details:
       url: "https://ericzimmerman.github.io/#!index.md"
       description: "Advanced registry browser for shell folder configuration analysis"
     - name: "Autoruns"
-      url: "https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns"
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns"
       description: "Microsoft Sysinternals tool with startup folder enumeration"
     - name: "Folder Options"
       description: "Windows Folder Options control panel for folder behavior configuration"
@@ -117,10 +117,10 @@ metadata:
 
   references:
     - title: "Shell Folders"
-      url: "https://docs.microsoft.com/en-us/windows/win32/shell/csidl"
+      url: "https://learn.microsoft.com/en-us/windows/win32/shell/csidl"
       type: "official"
     - title: "Folder Redirection"
-      url: "https://docs.microsoft.com/en-us/windows-server/storage/folder-redirection/folder-redirection-overview"
+      url: "https://learn.microsoft.com/en-us/windows-server/storage/folder-redirection/folder-redirection-overview"
       type: "official"
     - title: "Startup Folder Persistence"
       url: "https://www.sans.org/blog/startup-folder-persistence/"

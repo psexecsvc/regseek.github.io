@@ -111,7 +111,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Certificate Stores"
-      url: "https://docs.microsoft.com/en-us/windows/win32/seccrypto/certificate-stores"
+      url: "https://learn.microsoft.com/en-us/windows/win32/seccrypto/certificate-stores"
       type: "official"
     - title: "Certificate-Based Attacks and Defense"
       url: "https://attack.mitre.org/techniques/T1553/004/"

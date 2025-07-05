@@ -107,10 +107,10 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Control Device Installation with Group Policy"
-      url: "https://docs.microsoft.com/en-us/windows/security/threat-protection/device-control/control-usb-devices-using-intune"
+      url: "https://learn.microsoft.com/en-us/windows/security/threat-protection/device-control/control-usb-devices-using-intune"
       type: "official"
     - title: "Device Installation Restriction Policies"
-      url: "https://docs.microsoft.com/en-us/previous-versions/dotnet/articles/bb530324(v=msdn.10)"
+      url: "https://learn.microsoft.com/en-us/previous-versions/dotnet/articles/bb530324(v=msdn.10)"
       type: "official"
     - title: "USB Device Control for Data Loss Prevention"
       url: "https://www.sans.org/white-papers/36240/"

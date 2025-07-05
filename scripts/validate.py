@@ -487,7 +487,7 @@ def print_validation_summary(results: List[ValidationResult]):
             warning_counts[warning_type] = warning_counts.get(warning_type, 0) + 1
     
     if warning_counts:
-        print(f"\n  COMMON WARNINGS:")
+        print(f"\n COMMON WARNINGS:")
         sorted_warnings = sorted(warning_counts.items(), key=lambda x: x[1], reverse=True)
         for warning_type, count in sorted_warnings[:5]:
             print(f"   • {warning_type}: {count} files")

@@ -14,9 +14,10 @@ details:
     tenant configurations, meeting settings, and Office 365 integration preferences.
 
   forensic_value: |
-    Critical for investigating internal communications, unauthorized external contacts,
-    and data sharing through Teams channels. Shows tenant memberships, external meeting
-    participation, and potential data exfiltration in enterprise environments.
+    Useful for understanding Teams client configuration and organizational settings that
+    may provide context for communication investigations. Shows tenant associations and
+    policy settings that could be relevant for determining authorized communication channels.
+    Note: Registry data contains configuration only, NOT actual communication content.
 
   structure: |
     Configuration includes tenant identifiers, user principal names, meeting policies,
@@ -40,31 +41,38 @@ details:
       description: "Registry analysis tool"
 
 limitations:
-  - "Shows configuration only, not actual chat messages or meeting content"
-  - "Policy settings don't prove what communications actually occurred"
-  - "External access configuration doesn't indicate actual external communication"
+  - "Registry data shows configuration only, NOT actual chat messages or meeting content"
+  - "Tenant membership does NOT prove active Teams usage or communication"
+  - "Policy settings do NOT prove what communications actually occurred"
+  - "External access configuration does NOT indicate actual external communication"
+  - "File sharing settings do NOT prove files were shared or data exfiltration occurred"
+  - "Meeting policies do NOT show actual meeting participation or content"
+  - "Configuration does NOT prove unauthorized external contacts or data sharing"
 
 correlation:
   required_for_definitive_conclusions:
-    - "Teams audit logs from Microsoft 365 admin center showing actual activities"
+    - "Microsoft 365 audit logs showing actual Teams chat and meeting activities"
+    - "Teams message export data from Microsoft compliance tools"
     - "Network traffic analysis confirming Teams communication sessions"
+    - "Process execution logs showing Teams client usage"
     - "File system artifacts showing downloaded or shared Teams files"
+    - "SharePoint/OneDrive logs for file sharing validation"
   
   strengthens_evidence:
-    - "Office 365 login logs confirming account access"
-    - "Email artifacts showing Teams meeting invitations"
-    - "SharePoint artifacts showing Teams-integrated file activities"
+    - "Office 365 authentication logs confirming account access"
+    - "Email artifacts showing Teams meeting invitations and calendar entries"
+    - "Memory dumps showing active Teams processes and loaded content"
+    - "Browser artifacts if Teams web client was used"
+    - "Mobile device artifacts if Teams mobile app was used"
+    - "Network flow analysis showing Teams service connections"
 
 metadata:
   windows_versions:
-    - "Windows 7"
-    - "Windows 8"
-    - "Windows 8.1"
     - "Windows 10"
     - "Windows 11"
 
   introduced: "Microsoft Teams (2017)"
-  criticality: "high"
+  criticality: "medium"
 
   investigation_types:
     - "insider-threat"
@@ -82,7 +90,7 @@ metadata:
 
   references:
     - title: "Microsoft Teams Documentation"
-      url: "https://docs.microsoft.com/en-us/microsoftteams/"
+      url: "https://learn.microsoft.com/en-us/microsoftteams/"
       type: "official"
 
 author:
@@ -92,6 +100,5 @@ author:
 
 contribution:
   date_added: "2025-06-08"
-  last_updated: "2025-06-12"
-  version: "3.0
-  "
+  last_updated: "2025-07-06"
+  version: "3.0"

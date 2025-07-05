@@ -100,10 +100,10 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Hyper-V"
-      url: "https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/"
+      url: "https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/"
       type: "official"
     - title: "Virtualization-Based Security"
-      url: "https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-vbs"
+      url: "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-vbs"
       type: "official"
     - title: "Virtual Machine Security Analysis"
       url: "https://www.sans.org/white-papers/36240/"

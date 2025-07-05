@@ -43,7 +43,7 @@ details:
       url: "https://ericzimmerman.github.io/#!index.md"
       description: "Advanced registry browser for screensaver configuration analysis"
     - name: "Autoruns"
-      url: "https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns"
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns"
       description: "Microsoft Sysinternals tool with screensaver enumeration"
     - name: "Screen Saver Settings"
       description: "Windows screensaver configuration and management utilities"
@@ -107,10 +107,10 @@ metadata:
 
   references:
     - title: "Screensaver Configuration"
-      url: "https://docs.microsoft.com/en-us/previous-versions/windows/desktop/legacy/dd162397(v=vs.85)"
+      url: "https://learn.microsoft.com/en-us/previous-versions/windows/desktop/legacy/dd162397(v=vs.85)"
       type: "official"
     - title: "Desktop Window Manager"
-      url: "https://docs.microsoft.com/en-us/windows/win32/dwm/dwm-overview"
+      url: "https://learn.microsoft.com/en-us/windows/win32/dwm/dwm-overview"
       type: "official"
     - title: "Screensaver Malware Persistence"
       url: "https://www.sans.org/blog/screensaver-persistence/"

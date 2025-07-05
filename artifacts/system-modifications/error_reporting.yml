@@ -44,7 +44,7 @@ details:
       url: "https://ericzimmerman.github.io/#!index.md"
       description: "Advanced registry analysis and browsing tool"
     - name: "WinDbg"
-      url: "https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/"
+      url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/"
       description: "Windows debugging toolkit for crash dump analysis"
     - name: "BlueScreenView"
       url: "https://www.nirsoft.net/utils/blue_screen_view.html"
@@ -107,7 +107,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Windows Error Reporting"
-      url: "https://docs.microsoft.com/en-us/windows/win32/wer/windows-error-reporting"
+      url: "https://learn.microsoft.com/en-us/windows/win32/wer/windows-error-reporting"
       type: "official"
     - title: "Crash Dump Analysis for Digital Forensics"
       url: "https://www.sans.org/white-papers/33927/"

@@ -109,7 +109,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Network Drive Mapping"
-      url: "https://docs.microsoft.com/en-us/windows-server/storage/file-server/"
+      url: "https://learn.microsoft.com/en-us/windows-server/storage/file-server/"
       type: "official"
     - title: "Lateral Movement via Network Shares"
       url: "https://attack.mitre.org/techniques/T1021/002/"

@@ -109,7 +109,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Windows Security Center"
-      url: "https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-security-center/"
+      url: "https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-security-center/"
       type: "official"
     - title: "Security Center Manipulation by Malware"
       url: "https://attack.mitre.org/techniques/T1562/001/"

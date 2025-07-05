@@ -94,7 +94,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Taskbar Jump Lists"
-      url: "https://docs.microsoft.com/en-us/windows/win32/shell/taskbar-extensions"
+      url: "https://learn.microsoft.com/en-us/windows/win32/shell/taskbar-extensions"
       type: "official"
     - title: "Windows 7 Jump Lists Forensics"
       url: "https://www.forensicfocus.com/articles/windows-7-jump-lists/"

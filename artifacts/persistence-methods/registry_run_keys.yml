@@ -39,7 +39,7 @@ details:
 
   tools:
     - name: "Autoruns"
-      url: "https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns"
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns"
       description: "Microsoft Sysinternals comprehensive autostart enumeration tool"
     - name: "Registry Explorer"
       url: "https://ericzimmerman.github.io/#!index.md"
@@ -114,7 +114,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Run and RunOnce Registry Keys"
-      url: "https://docs.microsoft.com/en-us/windows/win32/setupapi/run-and-runonce-registry-keys"
+      url: "https://learn.microsoft.com/en-us/windows/win32/setupapi/run-and-runonce-registry-keys"
       type: "official"
     - title: "MITRE ATT&CK: Boot or Logon Autostart Execution"
       url: "https://attack.mitre.org/techniques/T1547/001/"

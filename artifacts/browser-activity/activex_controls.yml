@@ -92,10 +92,10 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: ActiveX Controls"
-      url: "https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751968(v=vs.85)"
+      url: "https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751968(v=vs.85)"
       type: "official"
     - title: "ActiveX Kill Bits"
-      url: "https://docs.microsoft.com/en-us/troubleshoot/browsers/activex-controls-not-load"
+      url: "https://learn.microsoft.com/en-us/troubleshoot/browsers/activex-controls-not-load"
       type: "official"
     - title: "MITRE ATT&CK: Exploitation for Client Execution"
       url: "https://attack.mitre.org/techniques/T1203/"

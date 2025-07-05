@@ -97,7 +97,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Internet Explorer Registry Settings"
-      url: "https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/"
+      url: "https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/"
       type: "official"
     - title: "Internet Explorer Forensics Guide"
       url: "https://www.forensicfocus.com/articles/internet-explorer-forensics/"

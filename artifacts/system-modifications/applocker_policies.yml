@@ -100,7 +100,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: AppLocker"
-      url: "https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/"
+      url: "https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/"
       type: "official"
     - title: "AppLocker Bypass Techniques"
       url: "https://github.com/api0cradle/UltimateAppLockerByPassList"

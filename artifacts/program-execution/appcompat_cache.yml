@@ -113,7 +113,7 @@ metadata:
 
   references:
     - title: "Application Compatibility Cache"
-      url: "https://docs.microsoft.com/en-us/windows/win32/devnotes/application-compatibility-cache"
+      url: "https://learn.microsoft.com/en-us/windows/win32/devnotes/application-compatibility-cache"
       type: "official"
     - title: "Leveraging the Application Compatibility Cache in Forensic Investigations"
       url: "https://www.mandiant.com/resources/blog/caching-out-the-val"

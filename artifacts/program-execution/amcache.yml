@@ -49,7 +49,7 @@ details:
 limitations:
   - "AmCache entry does NOT prove program execution - only shows file was present on system"
   - "File metadata can be modified or spoofed by malware authors"
-  - "SHA1 hashes may not be unique across all possible files"
+  - "File metadata correlation requires verification against known malware databases"
   - "Compilation timestamps can be altered to evade detection"
   - "File presence doesn't indicate when or if the file was actually executed"
   - "Renamed executables may retain original metadata from before renaming"
@@ -128,5 +128,5 @@ author:
 
 contribution:
   date_added: "2025-01-15"
-  last_updated: "2025-06-12"
+  last_updated: "2025-07-06"
   version: "3.0"

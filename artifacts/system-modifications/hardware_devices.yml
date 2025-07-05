@@ -116,7 +116,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Device Installation"
-      url: "https://docs.microsoft.com/en-us/windows-hardware/drivers/install/"
+      url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/install/"
       type: "official"
     - title: "Windows Hardware Forensics Guide"
       url: "https://www.forensicfocus.com/articles/windows-hardware-forensics/"

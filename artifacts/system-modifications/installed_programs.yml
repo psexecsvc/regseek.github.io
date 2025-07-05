@@ -119,10 +119,10 @@ metadata:
 
   references:
     - title: "Windows Installer Registry Entries"
-      url: "https://docs.microsoft.com/en-us/windows/win32/msi/registry"
+      url: "https://learn.microsoft.com/en-us/windows/win32/msi/registry"
       type: "official"
     - title: "Add or Remove Programs Registry Keys"
-      url: "https://docs.microsoft.com/en-us/troubleshoot/windows-server/application-management/remove-programs-not-listed"
+      url: "https://learn.microsoft.com/en-us/troubleshoot/windows-server/application-management/remove-programs-not-listed"
       type: "official"
     - title: "Software Inventory for Security"
       url: "https://www.sans.org/blog/software-inventory-security-analysis/"

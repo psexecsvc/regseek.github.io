@@ -111,7 +111,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Security Account Manager"
-      url: "https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/"
+      url: "https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/"
       type: "official"
     - title: "SAM Database Forensics and Analysis"
       url: "https://www.sans.org/white-papers/36427/"

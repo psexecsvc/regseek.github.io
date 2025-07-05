@@ -105,13 +105,13 @@ metadata:
 
   references:
     - title: "Windows Update"
-      url: "https://docs.microsoft.com/en-us/windows/deployment/update/"
+      url: "https://learn.microsoft.com/en-us/windows/deployment/update/"
       type: "official"
     - title: "Windows Update Security and Attack Vectors"
       url: "https://www.sans.org/white-papers/36427/"
       type: "research"
     - title: "WSUS Infrastructure Security"
-      url: "https://docs.microsoft.com/en-us/windows-server/administration/windows-server-update-services/"
+      url: "https://learn.microsoft.com/en-us/windows-server/administration/windows-server-update-services/"
       type: "official"
 
   retention:

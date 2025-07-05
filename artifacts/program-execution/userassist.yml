@@ -25,6 +25,8 @@ details:
   examples:
     - "Encoded: HRZR_PGYFRFFVAT\\{CEBTENF}\\Count"
     - "Decoded: UEME_CTLSESSION\\{PROGRAMS}\\Count"
+    - "Encoded: HRZR_HAVPBQR\\{Q311ZRQ4-R36O-11PR-O310-00N026RQQ67N}\\Count"
+    - "Decoded: UEME_UNICODE\\{F4E57C4B-2036-45F0-A9AB-443BCFE33D93}\\Count"
     - "Program: notepad.exe"
     - "Run Count: 15"
     - "Last Executed: 2024-01-15 14:30:25"
@@ -128,5 +130,5 @@ author:
 
 contribution:
   date_added: "2025-01-15"
-  last_updated: "2025-06-12"
+  last_updated: "2025-07-06"
   version: "3.0"

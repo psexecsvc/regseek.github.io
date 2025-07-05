@@ -93,7 +93,7 @@ metadata:
 
   references:
     - title: "Windows Firewall with Advanced Security"
-      url: "https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/"
+      url: "https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/"
       type: "official"
 
   retention:

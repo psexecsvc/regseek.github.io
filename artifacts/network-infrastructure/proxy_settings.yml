@@ -117,10 +117,10 @@ metadata:
 
   references:
     - title: "WinINet Proxy Configuration"
-      url: "https://docs.microsoft.com/en-us/windows/win32/wininet/wininet-proxy-configuration"
+      url: "https://learn.microsoft.com/en-us/windows/win32/wininet/wininet-proxy-configuration"
       type: "official"
     - title: "Proxy Auto-Configuration (PAC) Files"
-      url: "https://docs.microsoft.com/en-us/troubleshoot/browsers/proxy-auto-configuration-files"
+      url: "https://learn.microsoft.com/en-us/troubleshoot/browsers/proxy-auto-configuration-files"
       type: "official"
     - title: "Network Proxy Security Analysis"
       url: "https://www.sans.org/blog/proxy-configuration-analysis/"

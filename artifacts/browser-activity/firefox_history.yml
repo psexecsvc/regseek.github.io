@@ -15,9 +15,10 @@ details:
     association handlers. Manages Firefox integration with Windows shell and protocol handlers.
 
   forensic_value: |
-    Essential for Firefox-based investigations including profile location identification,
-    installation timeline establishment, and browser preference analysis. Shows Firefox
-    usage patterns and integration with system shell for protocol handling.
+    Useful for identifying Firefox installation and determining profile locations for
+    further browser analysis. Shows Firefox integration with Windows file associations
+    and protocol handlers. Note: Registry data contains installation/configuration
+    information only, NOT actual browsing behavior or usage patterns.
 
   structure: |
     Installation information organized under Mozilla\\Firefox including CurrentVersion,
@@ -44,22 +45,30 @@ details:
       description: "Advanced registry analysis tool"
 
 limitations:
-  - "Registry shows installation and configuration only, not browsing history"
-  - "Profile path doesn't indicate actual usage or activity"
-  - "Installation presence doesn't prove Firefox was actively used"
-  - "Version information shows installed version, not update history"
+  - "Registry shows installation and configuration only, NOT actual browsing history or usage"
+  - "Profile path does NOT indicate actual browser activity or user behavior"
+  - "Installation presence does NOT prove Firefox was actively used"
+  - "Version information does NOT show browsing patterns or usage frequency"
+  - "File associations do NOT prove actual browsing behavior or user intent"
+  - "Protocol handlers do NOT show what websites were visited or downloaded"
+  - "Registry data does NOT contain browser preferences or actual browser usage evidence"
 
 correlation:
   required_for_definitive_conclusions:
-    - "Firefox profile databases (places.sqlite, cookies.sqlite)"
-    - "Browser history files in profile directories"
-    - "Process execution logs showing Firefox activity"
-    - "File access logs for profile directories"
+    - "Firefox SQLite databases (places.sqlite, cookies.sqlite, formhistory.sqlite)"
+    - "Browser cache files and temporary internet files"
+    - "Downloaded files correlation with browser activity"
+    - "Process execution logs showing firefox.exe activity"
+    - "Network traffic logs showing actual web requests"
+    - "Memory dumps showing active Firefox sessions"
   
   strengthens_evidence:
-    - "Timeline analysis of installation and profile creation"
-    - "User activity showing Firefox usage patterns"
-    - "File operations in Firefox directories"
+    - "Prefetch files showing Firefox execution patterns"
+    - "Recent documents showing files opened from downloads"
+    - "ShellBags showing Downloads folder navigation"
+    - "Event logs showing browser-related security warnings"
+    - "Timeline analysis correlating installation with actual usage"
+    - "File system artifacts showing profile directory modifications"
 
 metadata:
   windows_versions:
@@ -113,5 +122,5 @@ author:
 
 contribution:
   date_added: "2025-01-15"
-  last_updated: "2025-01-15"
+  last_updated: "2025-07-06"
   version: "3.0"

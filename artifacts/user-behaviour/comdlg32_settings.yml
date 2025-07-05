@@ -102,7 +102,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Common Dialog Box Library"
-      url: "https://docs.microsoft.com/en-us/windows/win32/dlgbox/common-dialog-box-library"
+      url: "https://learn.microsoft.com/en-us/windows/win32/dlgbox/common-dialog-box-library"
       type: "official"
     - title: "Windows File Dialog Forensics"
       url: "https://www.forensicfocus.com/articles/windows-file-dialog-forensics/"

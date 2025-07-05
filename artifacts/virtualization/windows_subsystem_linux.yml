@@ -95,10 +95,10 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Windows Subsystem for Linux"
-      url: "https://docs.microsoft.com/en-us/windows/wsl/"
+      url: "https://learn.microsoft.com/en-us/windows/wsl/"
       type: "official"
     - title: "WSL Security Considerations"
-      url: "https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel"
+      url: "https://learn.microsoft.com/en-us/windows/wsl/wsl2-kernel"
       type: "official"
 
   retention:

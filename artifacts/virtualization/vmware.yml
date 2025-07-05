@@ -3,10 +3,10 @@ category: "virtualization"
 description: "VMware virtualization software configuration, virtual machine management, and hypervisor settings"
 
 paths:
-  - "HKCU\\Software\\VMware, Inc.\\VMware Workstation"
-  - "HKLM\\SOFTWARE\\VMware, Inc.\\VMware Workstation"
-  - "HKCU\\Software\\VMware, Inc.\\VMware Player"
-  - "HKLM\\SOFTWARE\\VMware, Inc.\\VMware Player"
+  - "HKCU\\Software\\VMware Inc\\VMware Workstation"
+  - "HKLM\\SOFTWARE\\VMware Inc\\VMware Workstation"
+  - "HKCU\\Software\\VMware Inc\\VMware Player"
+  - "HKLM\\SOFTWARE\\VMware Inc\\VMware Player"
 
 details:
   what: |
@@ -111,5 +111,5 @@ author:
 
 contribution:
   date_added: "2025-06-08"
-  last_updated: "2025-06-08"
+  last_updated: "2025-07-06"
   version: "1.0"

@@ -100,7 +100,7 @@ metadata:
       url: "https://support.microsoft.com/en-us/topic/getting-started-with-your-phone-app-2d0fe4c3-36dd-43aa-9d1e-6b8a745c7e43"
       type: "official"
     - title: "Windows Cross-Device Platform"
-      url: "https://docs.microsoft.com/en-us/windows/uwp/launch-resume/connected-apps-and-devices"
+      url: "https://learn.microsoft.com/en-us/windows/uwp/launch-resume/connected-apps-and-devices"
       type: "official"
     - title: "Mobile Device Security in Enterprise Environments"
       url: "https://www.sans.org/white-papers/36240/"

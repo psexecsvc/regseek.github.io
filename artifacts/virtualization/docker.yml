@@ -10,9 +10,10 @@ paths:
 
 details:
   what: |
-    Docker Desktop configuration for container development including container creation, 
-    image management, volume mounting, and network configuration. Registry stores installation 
-    settings, runtime preferences, and resource allocations.
+    Docker Desktop Windows integration settings including installation paths, basic configuration 
+    preferences, and Windows-specific integration options. Note: Docker primarily stores 
+    operational data (containers, images, networks) in JSON configuration files and databases 
+    in %APPDATA%\Docker, not in the Windows registry.
 
   forensic_value: |
     Important for investigating containerized application development, potential isolation bypass 
@@ -20,18 +21,18 @@ details:
     and can reveal container-based data exfiltration or isolated development activities.
 
   structure: |
-    Docker Desktop configuration includes installation paths, resource settings, container runtime 
-    preferences, volume mount configurations, and network settings. Container registry tracks 
-    image repositories and development workflows.
+    Registry contains basic Docker Desktop installation information, Windows integration settings, 
+    and file associations. Operational container data (images, containers, networks, volumes) 
+    is stored in Docker's JSON configuration files in the user's AppData directory, not in the Windows registry.
 
   examples:
     - "InstallPath: C:\\Program Files\\Docker\\Docker\\Docker Desktop.exe"
-    - "ResourceSettings: CPUs=4, Memory=8GB"
-    - "EnableKubernetesCluster: 1 (Kubernetes integration enabled)"
-    - "ShareDrives: C:\\ (Host drive sharing enabled)"
-    - "FileSharing: C:\\Development (Shared development directory)"
-    - "ProxySettings: http://proxy.company.com:8080"
-    - "WSL2Backend: 1 (Windows Subsystem for Linux backend)"
+    - "Version: Docker Desktop 4.25.0"
+    - "FileAssociation: .dockerfile -> Docker Desktop"
+    - "ProtocolHandler: docker:// (Docker protocol registration)"
+    - "WSLIntegration: 1 (Windows Subsystem for Linux enabled)"
+    - "Note: Container runtime settings are in JSON files at %APPDATA%\\Docker\\settings.json"
+    - "Note: Container images stored in virtual disk files, not registry"
 
   tools:
     - name: "Docker Desktop GUI"
@@ -43,13 +44,13 @@ details:
       description: "Advanced registry analysis and browsing tool"
 
 limitations:
-  - "Docker registry configuration does NOT prove containers were created or executed"
+  - "Docker registry entries do NOT prove containers were created or executed"
   - "Installation presence doesn't indicate active container development or deployment"
-  - "Resource allocation settings don't show what containers actually used resources"
-  - "File sharing configuration doesn't prove files were shared with containers"
-  - "Drive sharing settings don't indicate data was accessed from containers"
-  - "Kubernetes integration settings don't prove orchestration was used"
-  - "WSL2 backend configuration doesn't show Linux containers were run"
+  - "Registry entries do NOT contain container runtime data, images, or configuration"
+  - "File associations don't prove Docker was actively used for container operations"
+  - "Registry settings only show Windows integration, not actual Docker operations"
+  - "Actual container data is stored in JSON files and virtual disks, not in Windows registry"
+  - "WSL integration settings don't show Linux containers were run or what they contained"
 
 correlation:
   required_for_definitive_execution_proof:
@@ -107,5 +108,5 @@ author:
 
 contribution:
   date_added: "2025-06-08"
-  last_updated: "2025-06-12"
+  last_updated: "2025-07-06"
   version: "3.0"

@@ -53,7 +53,7 @@ details:
     - name: "Windows Settings - Default Apps"
       description: "Built-in Windows interface for managing file associations"
     - name: "Autoruns"
-      url: "https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns"
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns"
       description: "Shows file association abuse for persistence"
 
 limitations:
@@ -117,7 +117,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: File Type and URI Associations"
-      url: "https://docs.microsoft.com/en-us/windows/win32/shell/fa-file-types"
+      url: "https://learn.microsoft.com/en-us/windows/win32/shell/fa-file-types"
       type: "official"
     - title: "Malware Persistence via File Association Hijacking"
       url: "https://attack.mitre.org/techniques/T1546/001/"

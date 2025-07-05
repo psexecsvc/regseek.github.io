@@ -1,6 +1,6 @@
-title: "Windows Search Index and Configuration"
+title: "Windows Search Configuration Settings"
 category: "user-behaviour"
-description: "Windows Search service configuration, indexed locations, and search preferences"
+description: "Windows Search service configuration settings, indexing policies, and search preferences (not actual search history)"
 
 paths:
   - "HKLM\\SOFTWARE\\Microsoft\\Windows Search"
@@ -17,10 +17,10 @@ details:
     both local and network resources.
 
   forensic_value: |
-    Critical for understanding user search patterns, data access intentions, and information-seeking
-    behavior. Shows what locations were indexed for search capabilities and reveals search
-    preferences that might indicate user intent to hide or find specific data types. Configuration
-    changes may indicate attempts to hide data from search.
+    Important for understanding search service configuration and indexing policies that may
+    affect evidence collection. Shows what locations are configured for indexing and search
+    privacy settings that might impact investigation scope. Note: This artifact contains
+    configuration settings only, NOT actual search queries or user search history.
 
   structure: |
     Search configuration includes indexed location rules (CrawlScopeManager), file type filters,
@@ -51,13 +51,14 @@ details:
       description: "Third-party tools for comprehensive search settings analysis"
 
 limitations:
-  - "Search configuration does NOT prove search functionality was actually used"
-  - "Indexed locations don't indicate files were searched for or found"
-  - "Privacy settings don't show what search queries were made"
-  - "Excluded paths don't prove files were hidden intentionally"
-  - "Indexing service status doesn't indicate search activity occurred"
-  - "File type filters don't show specific files were indexed or searched"
-  - "Network indexing settings don't prove network resources were accessed"
+  - "Configuration settings do NOT contain actual search queries or search history"
+  - "Indexed locations do NOT prove files were searched for or found"
+  - "Privacy settings do NOT show what search queries were made"
+  - "Excluded paths do NOT prove files were hidden intentionally"
+  - "Indexing service status does NOT indicate search activity occurred"
+  - "File type filters do NOT show specific files were indexed or searched"
+  - "Network indexing settings do NOT prove network resources were accessed"
+  - "These registry settings only show configuration, NOT user search behavior or patterns"
 
 correlation:
   required_for_definitive_usage_proof:
@@ -109,7 +110,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Windows Search"
-      url: "https://docs.microsoft.com/en-us/windows/win32/search/"
+      url: "https://learn.microsoft.com/en-us/windows/win32/search/"
       type: "official"
     - title: "Windows Search Index Forensics"
       url: "https://www.forensicfocus.com/articles/windows-search-index-forensics/"
@@ -136,5 +137,5 @@ author:
 
 contribution:
   date_added: "2025-01-15"
-  last_updated: "2025-06-12"
+  last_updated: "2025-07-06"
   version: "3.0"

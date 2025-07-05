@@ -115,10 +115,10 @@ metadata:
 
   references:
     - title: "Office File Formats and Extensions"
-      url: "https://docs.microsoft.com/en-us/deployoffice/compat/office-file-format-reference"
+      url: "https://learn.microsoft.com/en-us/deployoffice/compat/office-file-format-reference"
       type: "official"
     - title: "Office Security and Trust Center"
-      url: "https://docs.microsoft.com/en-us/office/client-developer/shared/security-and-trust-center"
+      url: "https://learn.microsoft.com/en-us/office/client-developer/shared/security-and-trust-center"
       type: "official"
     - title: "Digital Forensics: Office Document Analysis"
       url: "https://www.sans.org/blog/digital-forensics-office-documents/"

@@ -95,10 +95,10 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: App Permissions"
-      url: "https://docs.microsoft.com/en-us/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services"
+      url: "https://learn.microsoft.com/en-us/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services"
       type: "official"
     - title: "Windows Privacy Controls"
-      url: "https://docs.microsoft.com/en-us/windows/privacy/"
+      url: "https://learn.microsoft.com/en-us/windows/privacy/"
       type: "official"
     - title: "Digital Privacy and Device Permissions Forensics"
       url: "https://www.sans.org/white-papers/39855/"

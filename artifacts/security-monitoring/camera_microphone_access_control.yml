@@ -41,7 +41,7 @@ details:
     - name: "PrivacyView"
       description: "Third-party tools for Windows privacy setting analysis"
     - name: "Process Monitor"
-      url: "https://docs.microsoft.com/en-us/sysinternals/downloads/procmon"
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/procmon"
       description: "Monitor real-time camera/microphone access attempts"
 
 limitations:
@@ -92,10 +92,10 @@ metadata:
 
   references:
     - title: "Windows Privacy Controls"
-      url: "https://docs.microsoft.com/en-us/windows/privacy/"
+      url: "https://learn.microsoft.com/en-us/windows/privacy/"
       type: "official"
     - title: "CapabilityAccessManager Documentation"
-      url: "https://docs.microsoft.com/en-us/uwp/api/windows.security.authorization.appcapabilityaccess"
+      url: "https://learn.microsoft.com/en-us/uwp/api/windows.security.authorization.appcapabilityaccess"
       type: "official"
 
   retention:

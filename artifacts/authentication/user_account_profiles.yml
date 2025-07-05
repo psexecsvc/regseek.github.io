@@ -40,7 +40,7 @@ details:
       url: "https://ericzimmerman.github.io/#!index.md"
       description: "Advanced registry analysis and browsing tool"
     - name: "PsGetSid"
-      url: "https://docs.microsoft.com/en-us/sysinternals/downloads/psgetsid"
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/psgetsid"
       description: "Utility for translating between account names and SIDs"
     - name: "SAM Parser"
       description: "Specialized tools for analyzing Security Account Manager database"
@@ -110,7 +110,7 @@ metadata:
 
   references:
     - title: "User Profiles"
-      url: "https://docs.microsoft.com/en-us/windows/win32/shell/user-profiles"
+      url: "https://learn.microsoft.com/en-us/windows/win32/shell/user-profiles"
       type: "official"
     - title: "Windows User Account Forensics"
       url: "https://www.forensicfocus.com/articles/windows-user-account-forensics/"

@@ -117,10 +117,10 @@ metadata:
 
   references:
     - title: "Windows VPN Connections"
-      url: "https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/vpn-top"
+      url: "https://learn.microsoft.com/en-us/windows-server/remote/remote-access/vpn/vpn-top"
       type: "official"
     - title: "Remote Access Service (RAS)"
-      url: "https://docs.microsoft.com/en-us/windows/win32/rras/remote-access-service-ras-"
+      url: "https://learn.microsoft.com/en-us/windows/win32/rras/remote-access-service-ras-"
       type: "official"
     - title: "VPN Security Analysis"
       url: "https://www.sans.org/blog/vpn-security-analysis/"

@@ -36,10 +36,10 @@ details:
       url: "https://ericzimmerman.github.io/#!index.md"
       description: "Advanced registry analysis for AppCertDLLs detection"
     - name: "Autoruns"
-      url: "https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns"
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns"
       description: "Microsoft Sysinternals tool with AppCertDLLs enumeration"
     - name: "Process Monitor"
-      url: "https://docs.microsoft.com/en-us/sysinternals/downloads/procmon"
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/procmon"
       description: "Real-time monitoring of DLL injection activities"
     - name: "RegRipper"
       url: "https://github.com/keydet89/RegRipper3.0"
@@ -111,7 +111,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Application Certification"
-      url: "https://docs.microsoft.com/en-us/windows/win32/win7appqual/application-certification"
+      url: "https://learn.microsoft.com/en-us/windows/win32/win7appqual/application-certification"
       type: "official"
     - title: "MITRE ATT&CK: Process Injection"
       url: "https://attack.mitre.org/techniques/T1055/"

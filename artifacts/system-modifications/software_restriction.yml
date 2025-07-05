@@ -107,7 +107,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Software Restriction Policies"
-      url: "https://docs.microsoft.com/en-us/windows-server/identity/software-restriction-policies/software-restriction-policies"
+      url: "https://learn.microsoft.com/en-us/windows-server/identity/software-restriction-policies/software-restriction-policies"
       type: "official"
     - title: "Software Restriction Policy Bypass Techniques"
       url: "https://attack.mitre.org/techniques/T1218/"

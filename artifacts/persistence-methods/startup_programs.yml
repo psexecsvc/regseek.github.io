@@ -38,7 +38,7 @@ details:
 
   tools:
     - name: "Autoruns"
-      url: "https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns"
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns"
       description: "Microsoft Sysinternals comprehensive autostart program analyzer"
     - name: "Registry Explorer"
       url: "https://ericzimmerman.github.io/#!index.md"
@@ -113,7 +113,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Session Manager"
-      url: "https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/session-manager"
+      url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/session-manager"
       type: "official"
     - title: "Windows Boot Process and Startup Analysis"
       url: "https://www.sans.org/white-papers/33927/"

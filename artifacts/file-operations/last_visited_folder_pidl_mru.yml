@@ -109,10 +109,10 @@ metadata:
 
   references:
     - title: "Common Dialog Box Library"
-      url: "https://docs.microsoft.com/en-us/windows/win32/dlgbox/common-dialog-box-library"
+      url: "https://learn.microsoft.com/en-us/windows/win32/dlgbox/common-dialog-box-library"
       type: "official"
     - title: "PIDL (Pointer to Item IDentifier List)"
-      url: "https://docs.microsoft.com/en-us/windows/win32/shell/objects"
+      url: "https://learn.microsoft.com/en-us/windows/win32/shell/objects"
       type: "official"
     - title: "Windows Dialog History Forensics"
       url: "https://www.sans.org/blog/windows-dialog-history-analysis/"

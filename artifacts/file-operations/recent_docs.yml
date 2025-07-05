@@ -115,7 +115,7 @@ metadata:
 
   references:
     - title: "Windows Shell Recent Documents"
-      url: "https://docs.microsoft.com/en-us/windows/win32/shell/recent-documents"
+      url: "https://learn.microsoft.com/en-us/windows/win32/shell/recent-documents"
       type: "official"
     - title: "Registry Forensics: Recent Documents"
       url: "https://www.sans.org/blog/digital-forensics-recent-documents-analysis/"

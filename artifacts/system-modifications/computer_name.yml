@@ -107,10 +107,10 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Computer Names"
-      url: "https://docs.microsoft.com/en-us/windows/win32/sysinfo/computer-names"
+      url: "https://learn.microsoft.com/en-us/windows/win32/sysinfo/computer-names"
       type: "official"
     - title: "Windows Network Identity and Domain Membership"
-      url: "https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/"
+      url: "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/"
       type: "official"
 
   retention:

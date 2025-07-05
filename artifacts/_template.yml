@@ -99,7 +99,7 @@ metadata:
   # References and sources (optional but recommended)
   references:
     - title: "Microsoft Documentation"
-      url: "https://docs.microsoft.com/..."
+      url: "https://learn.microsoft.com/..."
       type: "official" # official, research, blog, tool
     - title: "Research Paper or Blog Post"
       url: "https://example.com/paper.pdf"

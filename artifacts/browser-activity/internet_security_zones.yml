@@ -94,7 +94,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Internet Explorer Security Zones"
-      url: "https://docs.microsoft.com/en-us/troubleshoot/browsers/security-zones-registry-entries"
+      url: "https://learn.microsoft.com/en-us/troubleshoot/browsers/security-zones-registry-entries"
       type: "official"
     - title: "Browser Security Zone Exploitation Techniques"
       url: "https://attack.mitre.org/techniques/T1185/"

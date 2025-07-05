@@ -106,7 +106,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Windows Portable Devices"
-      url: "https://docs.microsoft.com/en-us/windows/win32/windows-portable-devices"
+      url: "https://learn.microsoft.com/en-us/windows/win32/windows-portable-devices"
       type: "official"
     - title: "Mobile Device Forensics and Windows Portable Devices"
       url: "https://www.sans.org/white-papers/33584/"

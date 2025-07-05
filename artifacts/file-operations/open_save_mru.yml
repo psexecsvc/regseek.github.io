@@ -116,7 +116,7 @@ metadata:
 
   references:
     - title: "Common Dialog Box Library"
-      url: "https://docs.microsoft.com/en-us/windows/win32/dlgbox/common-dialog-box-library"
+      url: "https://learn.microsoft.com/en-us/windows/win32/dlgbox/common-dialog-box-library"
       type: "official"
     - title: "Windows MRU Lists Forensics"
       url: "https://www.sans.org/blog/digital-forensics-mru-analysis/"

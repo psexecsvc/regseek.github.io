@@ -47,7 +47,7 @@ details:
     - name: "Resource Monitor (resmon.exe)"
       description: "Real-time system resource monitoring and analysis tool"
     - name: "Performance Toolkit (WPT)"
-      url: "https://docs.microsoft.com/en-us/windows-hardware/test/wpt/"
+      url: "https://learn.microsoft.com/en-us/windows-hardware/test/wpt/"
       description: "Windows Performance Toolkit for advanced system analysis"
 
 limitations:
@@ -110,7 +110,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: Performance Counters"
-      url: "https://docs.microsoft.com/en-us/windows/win32/perfctrs/performance-counters-portal"
+      url: "https://learn.microsoft.com/en-us/windows/win32/perfctrs/performance-counters-portal"
       type: "official"
     - title: "Windows Performance Analysis for Security"
       url: "https://www.sans.org/white-papers/33855/"

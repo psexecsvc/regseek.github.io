@@ -89,7 +89,7 @@ metadata:
 
   references:
     - title: "Windows Terminal Documentation"
-      url: "https://docs.microsoft.com/en-us/windows/terminal/"
+      url: "https://learn.microsoft.com/en-us/windows/terminal/"
       type: "official"
 
   retention:

@@ -76,10 +76,6 @@ metadata:
     - "Windows 8.1"
     - "Windows 10"
     - "Windows 11"
-    - "Windows Server 2012"
-    - "Windows Server 2016"
-    - "Windows Server 2019"
-    - "Windows Server 2022"
 
   introduced: "Windows 8"
   criticality: "medium"
@@ -100,7 +96,7 @@ metadata:
 
   references:
     - title: "Microsoft Documentation: UWP App Packages"
-      url: "https://docs.microsoft.com/en-us/windows/uwp/packaging/"
+      url: "https://learn.microsoft.com/en-us/windows/uwp/packaging/"
       type: "official"
     - title: "Windows Store App Forensics"
       url: "https://www.forensicfocus.com/articles/windows-store-app-forensics/"
